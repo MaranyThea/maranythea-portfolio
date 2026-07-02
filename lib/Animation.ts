@@ -1,4 +1,8 @@
-export const fadeUp = {
+// src/lib/animation.ts
+
+import { Variants } from "framer-motion";
+
+export const fadeUp: Variants = {
   hidden: {
     opacity: 0,
     y: 40,
@@ -8,12 +12,11 @@ export const fadeUp = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
     },
   },
 };
 
-export const fadeLeft = {
+export const fadeLeft: Variants = {
   hidden: {
     opacity: 0,
     x: -50,
@@ -27,7 +30,7 @@ export const fadeLeft = {
   },
 };
 
-export const fadeRight = {
+export const fadeRight: Variants = {
   hidden: {
     opacity: 0,
     x: 50,
@@ -41,7 +44,7 @@ export const fadeRight = {
   },
 };
 
-export const staggerContainer = {
+export const staggerContainer: Variants = {
   hidden: {},
   visible: {
     transition: {

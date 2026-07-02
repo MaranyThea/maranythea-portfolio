@@ -1,3 +1,4 @@
+import AnimatedSection from "../ui/animatedSection";
 import {
   User,
   Mail,
@@ -7,6 +8,7 @@ import {
 
 export default function About() {
   return (
+    <AnimatedSection>
     <section
       id="about"
       className="max-w-7xl mx-auto px-6 py-20"
@@ -76,6 +78,7 @@ export default function About() {
         </div>
       </div>
     </section>
+    </AnimatedSection>
   );
 }
 

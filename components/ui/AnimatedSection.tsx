@@ -1,54 +1,21 @@
-// src/lib/animation.ts
+"use client";
 
-import { Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import { fadeUp } from "@/lib/animation";
 
-export const fadeUp: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-    },
-  },
-};
+interface Props {
+  children: React.ReactNode;
+}
 
-export const fadeLeft: Variants = {
-  hidden: {
-    opacity: 0,
-    x: -50,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.6,
-    },
-  },
-};
-
-export const fadeRight: Variants = {
-  hidden: {
-    opacity: 0,
-    x: 50,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.6,
-    },
-  },
-};
-
-export const staggerContainer: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
+export default function AnimatedSection({ children }: Props) {
+  return (
+    <motion.section
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      {children}
+    </motion.section>
+  );
+}
