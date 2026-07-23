@@ -10,7 +10,7 @@ export default function Contact() {
       </p>
 
     <div className="flex gap-4 justify-center">
-      <SocialLinks image="/images/github.png" alt="GitHub" href="https://github.com" />
+      <SocialLinks image="/images/github.png" alt="GitHub" href="https://github.com/MaranyThea" />
       <SocialLinks image="/images/linkedin.png" alt="LinkedIn" href="https://linkedin.com" />
       <SocialLinks image="/images/mail_1.png" alt="Email" href="mailto:thea.marany@gmail.com" />
     </div>

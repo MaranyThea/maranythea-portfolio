@@ -43,7 +43,7 @@ export default function About() {
           </p>
 
           <a
-            href="/resume.pdf"
+            href="pdf/MaranyThea_resume.pdf"
             className="inline-flex items-center mt-8 px-6 py-3 rounded-xl border border-violet-500 hover:bg-violet-600 transition"
           >
             Download CV
