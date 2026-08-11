@@ -24,3 +24,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #050505;
+  color: #f5f5f5;
+}
+
+/* Selection */
+::selection {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Smooth transitions */
+* {
+  scroll-behavior: smooth;
+}

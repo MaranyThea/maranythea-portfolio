@@ -22,8 +22,8 @@ export default function Experience() {
 
         <ExperienceCard
           title="Software Developer"
-          company="Private Software Development Company"
-          period="2024 - Present"
+          company="Glean Asia, Co., Ltd."
+          period="1 year 8 months"
           description="Developing web applications, handling APIs, and working with Next.js and TypeScript."
         />
 
@@ -37,7 +37,7 @@ export default function Experience() {
         <ExperienceCard
           title="Computer Science Student"
           company="Royal University of Phnom Penh (RUPP)"
-          period="2021 - 2025"
+          period="Class of 2024"
           description="Studying algorithms, data structures, software engineering, and system design."
         />
 
