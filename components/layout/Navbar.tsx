@@ -8,8 +8,7 @@ const navItems = [
   { name: "Expertise", href: "#expertise" },
   { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Projects", href: "#projects" }
 ];
 
 export default function Navbar() {
