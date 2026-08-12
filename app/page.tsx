@@ -6,6 +6,7 @@ import Capabilities from "@/components/sections/Capabilities";
 import Footer from "@/components/layout/Footer";
 // import Experience from "@/components/sections/Experience";
 import SelectedWork from "@/components/sections/SelectedWork";
+import Education from "@/components/sections/Education";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       <About />
       <Capabilities />
       <SelectedWork />
+      <Education />
       <Footer />
     </main>
   );
