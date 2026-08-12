@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 // import Experience from "@/components/sections/Experience";
 import SelectedWork from "@/components/sections/SelectedWork";
 import Education from "@/components/sections/Education";
+// import CurrentlyLearning from "@/components/sections/CurrentlyLearning";
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
       <Capabilities />
       <SelectedWork />
       <Education />
+      {/* <CurrentlyLearning /> */}
       <Footer />
     </main>
   );

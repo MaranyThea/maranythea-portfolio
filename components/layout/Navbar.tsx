@@ -9,8 +9,11 @@ const navItems = [
   // { name: "Expertise", href: "#expertise" },
   // { name: "Skills", href: "#skills" },
   { name: "Capabilities", href: "#capabilities" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" }
+  // { name: "Experience", href: "#experience" },
+  // { name: "Projects", href: "#projects" }
+  { name: "Selected Work", href: "#selected-work" },
+  { name: "Education", href: "#education" },
+  // { name: "Currently Learning", href: "#currentlylearning" },
 ];
 
 export default function Navbar() {
