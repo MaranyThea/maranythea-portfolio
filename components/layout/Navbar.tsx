@@ -4,14 +4,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const navItems = [
-  {name: "Home", href: "#home"},
+  {name: "Home", href: "/"},
   { name: "About", href: "#about" },
   // { name: "Expertise", href: "#expertise" },
   // { name: "Skills", href: "#skills" },
   { name: "Capabilities", href: "#capabilities" },
   // { name: "Experience", href: "#experience" },
   // { name: "Projects", href: "#projects" }
-  { name: "Selected Work", href: "#selected-work" },
+  { name: "Selected Work", href: "#work" },
   { name: "Education", href: "#education" },
   // { name: "Currently Learning", href: "#currentlylearning" },
 ];
