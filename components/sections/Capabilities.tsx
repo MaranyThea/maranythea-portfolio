@@ -97,7 +97,7 @@ export default function Capabilities() {
   return (
     <section
       id="capabilities"
-      className="relative w-full px-6 py-24 scroll-mt-20"
+      className="relative w-full px-6 py-12 scroll-mt-14"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -105,7 +105,7 @@ export default function Capabilities() {
             SECTION HEADING
         ========================= */}
 
-        <div className="mb-16">
+        <div className="mb-6">
           <p className="text-sm uppercase tracking-[0.3em] text-blue-400 mb-3">
             What I specialize in
           </p>
@@ -241,11 +241,11 @@ export default function Capabilities() {
           <div
             className="
               relative
-              min-h-[560px]
+              min-h-[460px]
               rounded-3xl
               border border-gray-800
               bg-gray-950/50
-              p-8 sm:p-10
+              p-6 sm:p-8
               overflow-hidden
             "
           >
@@ -291,13 +291,13 @@ export default function Capabilities() {
                   Primary Specialization
                 </p>
 
-                <h3 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
+                <h3 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
                   Full-Stack
                   <br />
                   Web Development
                 </h3>
 
-                <p className="mt-6 max-w-2xl text-gray-400 leading-7">
+                <p className="mt-4 max-w-2xl text-gray-400 leading-7">
                   I specialize in building modern web applications
                   from interface to backend, combining clean
                   architecture, responsive design, and practical
@@ -306,7 +306,7 @@ export default function Capabilities() {
 
                 {/* Secondary Focus */}
 
-                <div className="mt-10 pt-8 border-t border-gray-800">
+                <div className="mt-4 pt-4 border-t border-gray-800">
 
                   <p className="text-xs uppercase tracking-[0.25em] text-gray-500 mb-3">
                     Secondary Focus
@@ -385,7 +385,7 @@ export default function Capabilities() {
 
                 {/* Heading */}
 
-                <h3 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
+                <h3 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
                   {activeCapability.heading}
                 </h3>
 
