@@ -8,6 +8,7 @@ export type EducationItem = {
   description: string;
   details?: string[];
   technologies?: string[];
+  logo?: string;
 };
 
 export const educationItems: EducationItem[] = [
@@ -29,7 +30,9 @@ export const educationItems: EducationItem[] = [
     ],
     technologies: [
       "Java",
-      "Python", ]
+      "Python",
+    ],
+    logo: "/images/rupp.png",
   },
 
   {
@@ -47,6 +50,7 @@ export const educationItems: EducationItem[] = [
       "AWS Services",
     ],
     technologies: ["AWS", "Cloud Computing", "Cloud Architecture", "Cloud Security"],
+    logo: "/images/cloud4cambodia.png",
   },
 
   {
@@ -64,5 +68,6 @@ export const educationItems: EducationItem[] = [
       "Data Technologies",
     ],
     technologies: ["Hadoop", "Spark", "Data Analytics", "Data Visualization"],
+    logo: "/images/samsung.jpeg",
   },
 ];

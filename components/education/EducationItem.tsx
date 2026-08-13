@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import type { EducationItem as EducationItemType } from "@/data/education";
 
@@ -22,47 +23,115 @@ export default function EducationItem({
         delay: index * 0.08,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group border-t border-neutral-300 py-10 md:py-8"
+      className="
+        group
+        border-t
+        border-neutral-300
+        py-10
+        md:py-8
+      "
     >
-      <div className="grid gap-8 md:grid-cols-[70px_140px_1fr] lg:grid-cols-[80px_160px_1fr]">
+      <div
+        className="
+          grid
+          gap-8
+          md:grid-cols-[160px_1fr]
+          lg:grid-cols-[180px_1fr]
+        "
+      >
+        {/* =====================================================
+            LEFT — TYPE / PERIOD
+        ====================================================== */}
 
-        {/* Number */}
-        <div className="text-sm text-neutral-400">
-          {education.number}
-        </div>
-
-        {/* Type / Period */}
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+          <p
+            className="
+              text-xs
+              uppercase
+              tracking-[0.2em]
+              text-neutral-500
+            "
+          >
             {education.type}
           </p>
 
-          <p className="mt-3 text-sm text-neutral-400">
+          <p className="mt-4 text-sm text-neutral-400">
             {education.period}
           </p>
         </div>
 
-        {/* Content */}
+        {/* =====================================================
+            RIGHT — EDUCATION DETAILS
+        ====================================================== */}
+
         <div>
-          <h3 className="max-w-3xl text-2xl font-medium tracking-tight md:text-3xl">
+          {/* Degree */}
+          <h3
+            className="
+              max-w-4xl
+              text-2xl
+              font-medium
+              tracking-tight
+              text-neutral-100
+              md:text-3xl
+            "
+          >
             {education.title}
           </h3>
 
-          <p className="mt-2 text-lg text-neutral-400">
-            {education.institution}
-          </p>
+          {/* University */}
+          <div className="mt-4 flex items-center gap-4">
+            {education.logo && (
+              <div
+                className="
+                  h-12
+                  w-12
+                  shrink-0
+                  overflow-hidden
+                  rounded-xl
+                  border
+                  border-neutral-300
+                  bg-white
+                "
+              >
+                <Image
+                  src={education.logo}
+                  alt={`${education.institution} logo`}
+                  width={48}
+                  height={48}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            )}
 
-          <p className="mt-6 max-w-2xl text-sm leading-7 text-neutral-400">
+            <p className="text-lg text-neutral-400">
+              {education.institution}
+            </p>
+          </div>
+
+          {/* Description */}
+          <p
+            className="
+              mt-7
+              max-w-3xl
+              text-sm
+              leading-7
+              text-neutral-400
+            "
+          >
             {education.description}
           </p>
 
           {/* Details */}
           {education.details && education.details.length > 0 && (
-            <div className="mt-7 flex flex-wrap gap-x-6 gap-y-2">
+            <div className="mt-7 flex flex-wrap gap-x-8 gap-y-3">
               {education.details.map((detail) => (
                 <span
                   key={detail}
-                  className="text-xs text-neutral-400"
+                  className="
+                    text-xs
+                    text-neutral-400
+                  "
                 >
                   {detail}
                 </span>
@@ -77,7 +146,19 @@ export default function EducationItem({
                 {education.technologies.map((technology) => (
                   <span
                     key={technology}
-                    className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-200"
+                    className="
+                      rounded-full
+                      border
+                      border-neutral-300
+                      px-3
+                      py-1.5
+                      text-xs
+                      text-neutral-200
+                      transition-colors
+                      duration-300
+                      group-hover:border-cyan-400/40
+                      group-hover:text-cyan-300
+                    "
                   >
                     {technology}
                   </span>

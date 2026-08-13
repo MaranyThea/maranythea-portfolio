@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import AquaAbout from "../ui/AquaAbout";
 import { ArrowUpRight, Briefcase, Code2 } from "lucide-react";
 const professionalWork = [
@@ -123,9 +124,9 @@ export default function SelectedWork() {
                 </div>
 
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-white/40">
+                  {/* <p className="text-xs uppercase tracking-[0.2em] text-white/40">
                     01
-                  </p>
+                  </p> */}
 
                   <h3 className="mt-1 text-xl font-medium">
                     Professional Work
@@ -157,9 +158,11 @@ export default function SelectedWork() {
                       {/* Company Logo */}
                       <div className="mt-2 flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
                         {work.logo ? (
-                          <img
+                          <Image
                             src={work.logo}
                             alt={`${work.company} logo`}
+                            width={48}
+                            height={48}
                             className="h-full w-full object-cover"
                           />
                         ) : (
@@ -234,9 +237,9 @@ export default function SelectedWork() {
                 </div>
 
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-white/40">
+                  {/* <p className="text-xs uppercase tracking-[0.2em] text-white/40">
                     02
-                  </p>
+                  </p> */}
 
                   <h3 className="mt-1 text-xl font-medium">
                     Personal Projects
