@@ -66,7 +66,7 @@ export default function SelectedWork() {
   return (
     <section
       id="work"
-      className="relative w-full overflow-hidden px-6 py-32 text-white md:px-10 lg:px-16"
+      className="relative w-full overflow-hidden px-6 py-24 text-white md:px-10 lg:px-16"
     >
       <AquaAbout />
 
@@ -77,7 +77,7 @@ export default function SelectedWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
-          className="mb-20 max-w-3xl"
+          className="mb-10 max-w-3xl"
         >
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px w-8 bg-[#00B4D8]" />
@@ -91,7 +91,7 @@ export default function SelectedWork() {
             Things I&apos;ve <span className="text-white/40">worked on.</span>
           </h2>
 
-          <p className="mt-6 max-w-2xl text-base leading-7 text-white/50 md:text-lg">
+          <p className="mt-4 max-w-2xl text-base leading-7 text-white/50 md:text-lg">
             A selection of professional experiences and personal projects that
             represent how I work, what I build, and what I&apos;m continuously
             learning.
@@ -112,7 +112,7 @@ export default function SelectedWork() {
             className="border-b border-white/10 pb-16 lg:border-b-0 lg:border-r lg:pr-12 "
           >
             {/* Section heading */}
-            <div className="mb-10 flex items-center justify-between">
+            <div className="mb-6 flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03]">
                   <Briefcase
@@ -150,7 +150,7 @@ export default function SelectedWork() {
                     duration: 0.5,
                     delay: index * 0.1,
                   }}
-                  className="group border-t border-white/10 py-8"
+                  className="group border-t border-white/10 py-6"
                 >
                   <div className="mb-5 flex items-start justify-between gap-4">
                     <div className="flex items-start gap-4">
@@ -223,7 +223,7 @@ export default function SelectedWork() {
             className="pt-16 lg:pl-12 lg:pt-0"
           >
             {/* Section heading */}
-            <div className="mb-10 flex items-center justify-between">
+            <div className="mb-6 flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10  bg-white/[0.03]">
                   <Code2
@@ -261,7 +261,7 @@ export default function SelectedWork() {
                     duration: 0.5,
                     delay: index * 0.1,
                   }}
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 border-gray-800 bg-gray-950/10 p-6 transition-all duration-500 hover:border-[#00B4D8]/30 hover:bg-[#00B4D8]/[0.03]"
+                  className="group relative overflow-hidden rounded-1xl border border-white/10 border-gray-800 bg-gray-950/10 p-6 transition-all duration-500 hover:border-[#00B4D8]/30 hover:bg-[#00B4D8]/[0.03]"
                 >
                   {/* Subtle aqua glow */}
                   <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-[#00B4D8]/[0.8] blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -272,16 +272,16 @@ export default function SelectedWork() {
                       {/* <span className="text-xs tracking-[0.2em] text-[#00B4D8]">
                       </span> */}
 
-                      <span className="text-xs text-white/30">
+                      {/* <span className="text-xs text-white/30">
                         {project.period}
-                      </span>
+                      </span> */}
                     </div>
 
                     {/* Project title */}
-                    <div className="mt-6 flex items-start justify-between gap-4">
+                    <div className="flex items-start justify-between gap-2">
                       <div>
                         <span className="text-[10px] uppercase tracking-[0.25em] text-white/30">
-                          {project.type}
+                          {project.period}  |  {project.type}
                         </span>
 
                         <h4 className="mt-2 text-2xl font-medium transition-colors duration-300 group-hover:text-[#00B4D8]">
@@ -307,12 +307,12 @@ export default function SelectedWork() {
                     </div>
 
                     {/* Description */}
-                    <p className="mt-5 text-sm leading-6 text-white/45">
+                    <p className="mt-4 text-sm leading-6 text-white/45">
                       {project.description}
                     </p>
 
                     {/* Technologies */}
-                    <div className="mt-6 flex flex-wrap gap-2">
+                    <div className="mt-4 flex flex-wrap gap-2">
                       {project.technologies.map((technology) => (
                         <span
                           key={technology}
@@ -335,7 +335,7 @@ export default function SelectedWork() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-20 border-t border-white/10 pt-8"
+          className="mt-10 border-t border-white/10 pt-8"
         >
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
             <p className="max-w-xl text-sm leading-6 text-white/30">

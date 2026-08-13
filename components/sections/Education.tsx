@@ -9,13 +9,13 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="w-full px-6 py-24 md:px-10 md:py-32"
+      className="w-full px-6 py-12 md:px-10 md:py-24"
     >
       <AquaAbout />
       <div className="mx-auto max-w-7xl">
 
         {/* Header */}
-        <div className="mb-20 grid gap-10 md:grid-cols-2">
+        <div className="mb-8 grid gap-8 md:grid-cols-2">
 
           <div>
             <motion.p
@@ -82,7 +82,7 @@ export default function Education() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-16 flex items-center justify-between border-t border-neutral-300 pt-6 text-xs uppercase tracking-[0.2em] text-neutral-400"
+          className="mt-8 flex items-center justify-between border-t border-neutral-300 pt-6 text-xs uppercase tracking-[0.2em] text-neutral-400"
         >
           <span>Education</span>
 

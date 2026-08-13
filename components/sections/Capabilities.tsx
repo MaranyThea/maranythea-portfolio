@@ -207,7 +207,7 @@ export default function Capabilities() {
                       ${
                         isActive
                           ? "text-white"
-                          : "text-gray-300 group-hover:text-white"
+                          : "text-gray-400 group-hover:text-white"
                       }
                     `}
                   >
@@ -353,7 +353,7 @@ export default function Capabilities() {
                           rounded-full
                           border border-gray-800
                           bg-gray-900
-                          text-sm text-gray-300
+                          text-sm text-gray-400
                           hover:border-cyan-500/40
                           hover:text-white
                           transition-all duration-300
@@ -415,7 +415,7 @@ export default function Capabilities() {
                           rounded-full
                           border border-gray-800
                           bg-gray-900
-                          text-sm text-gray-300
+                          text-sm text-gray-400
                           hover:border-cyan-500/40
                           hover:text-white
                           transition-all duration-300
@@ -434,7 +434,7 @@ export default function Capabilities() {
 
                   <p className="text-sm text-gray-500">
                     Part of my{" "}
-                    <span className="text-gray-300">
+                    <span className="text-gray-400">
                       Full-Stack Web Development
                     </span>{" "}
                     specialization.

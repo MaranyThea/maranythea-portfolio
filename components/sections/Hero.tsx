@@ -99,7 +99,7 @@ export default function Hero() {
                          bg-gray-900/50
                          backdrop-blur-sm
                          text-sm
-                         text-gray-300"
+                         text-gray-400"
             >
               <span className="relative flex h-2 w-2">
                 <span
@@ -206,7 +206,7 @@ export default function Hero() {
                            rounded-xl
                            border
                            border-gray-700
-                           text-gray-300
+                           text-gray-400
                            hover:text-white
                            hover:border-cyan-500
                            transition-all

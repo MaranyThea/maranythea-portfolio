@@ -27,6 +27,9 @@ export const educationItems: EducationItem[] = [
       "Data Structures & Algorithms",
       "Computer Networks",
     ],
+    technologies: [
+      "Java",
+      "Python", ]
   },
 
   {
@@ -43,7 +46,7 @@ export const educationItems: EducationItem[] = [
       "Cloud Computing",
       "AWS Services",
     ],
-    technologies: ["AWS"],
+    technologies: ["AWS", "Cloud Computing", "Cloud Architecture", "Cloud Security"],
   },
 
   {
@@ -60,5 +63,6 @@ export const educationItems: EducationItem[] = [
       "Data Processing",
       "Data Technologies",
     ],
+    technologies: ["Hadoop", "Spark", "Data Analytics", "Data Visualization"],
   },
 ];

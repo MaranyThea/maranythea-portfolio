@@ -22,7 +22,7 @@ export default function SkillCard({
             key={skill}
             className="px-4 py-2 rounded-full
                        bg-gray-900 border border-gray-700
-                       text-gray-300 text-sm
+                       text-gray-400 text-sm
                        hover:bg-cyan-500 hover:border-cyan-500
                        hover:text-white
                        transition-all duration-300"

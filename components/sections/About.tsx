@@ -241,7 +241,7 @@ export default function About() {
                     rounded-xl
                     border
                     border-gray-700
-                    text-gray-300
+                    text-gray-400
                     hover:text-white
                     hover:border-cyan-400
                     hover:bg-cyan-400/10

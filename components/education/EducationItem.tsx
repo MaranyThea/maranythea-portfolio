@@ -22,7 +22,7 @@ export default function EducationItem({
         delay: index * 0.08,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group border-t border-neutral-300 py-10 md:py-14"
+      className="group border-t border-neutral-300 py-10 md:py-8"
     >
       <div className="grid gap-8 md:grid-cols-[70px_140px_1fr] lg:grid-cols-[80px_160px_1fr]">
 

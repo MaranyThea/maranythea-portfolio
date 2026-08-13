@@ -98,7 +98,7 @@ export default function Expertise() {
                       className="px-3 py-1.5 rounded-full
                                  bg-gray-900
                                  border border-gray-700
-                                 text-gray-300 text-xs
+                                 text-gray-400 text-xs
                                  group-hover:border-gray-600
                                  transition-all duration-300"
                     >

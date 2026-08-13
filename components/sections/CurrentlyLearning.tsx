@@ -124,7 +124,7 @@ export default function CurrentlyLearning() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-16 flex items-center justify-between border-t border-neutral-300 pt-6 text-xs uppercase tracking-[0.2em] text-neutral-400"
+          className="mt-8 flex items-center justify-between border-t border-neutral-300 pt-6 text-xs uppercase tracking-[0.2em] text-neutral-400"
         >
           <span>Learning never stops</span>
 
