@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import AquaAbout from "../ui/AquaAbout";
 import {
   Code2,
   Server,
@@ -99,6 +100,7 @@ export default function Capabilities() {
       id="capabilities"
       className="relative w-full px-6 py-12 scroll-mt-14"
     >
+      <AquaAbout />
       <div className="max-w-7xl mx-auto">
 
         {/* =========================

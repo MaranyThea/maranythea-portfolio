@@ -2,11 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowDown,
-  ArrowUpRight,
-  Sparkles,
-} from "lucide-react";
+import { ArrowDown, ArrowUpRight, Sparkles } from "lucide-react";
 import AnimatedSection from "../ui/animatedSection";
 
 export default function Hero() {
@@ -126,7 +122,6 @@ export default function Hero() {
                              bg-blue-500"
                 />
               </span>
-
               Open to opportunities
             </div>
 
@@ -141,19 +136,11 @@ export default function Hero() {
                          leading-[0.95]
                          text-white"
             >
-              Hi, I&apos;m{" "}
-              <span className="text-blue-500">
-                Marany.
-              </span>
-
+              Hi, I&apos;m <span className="text-blue-500">Marany.</span>
               <br />
-
               I build things
               <br />
-
-              <span className="text-gray-500">
-                for the web.
-              </span>
+              <span className="text-gray-500">for the web.</span>
             </h1>
 
             {/* Description */}
@@ -164,9 +151,8 @@ export default function Hero() {
                          leading-8
                          text-gray-400"
             >
-              A Computer Science & Engineering graduate
-              passionate about building modern digital
-              experiences with web technologies, data,
+              A Computer Science & Engineering graduate passionate about
+              building modern digital experiences with web technologies, data,
               cloud, and AI.
             </p>
 
@@ -199,7 +185,6 @@ export default function Hero() {
                            shadow-blue-500/20"
               >
                 View My Work
-
                 <ArrowUpRight
                   size={18}
                   className="group-hover:translate-x-1
@@ -247,10 +232,7 @@ export default function Hero() {
             >
               <span>Scroll to explore</span>
 
-              <ArrowDown
-                size={16}
-                className="animate-bounce"
-              />
+              <ArrowDown size={16} className="animate-bounce" />
             </Link>
           </div>
 
@@ -297,13 +279,13 @@ export default function Hero() {
                          transition-transform
                          duration-500"
             >
-              <Image
-                src="/images/MaranyThea_Profile.jpeg"
-                alt="Marany Thea"
-                fill
-                priority
-                className="object-cover"
-              />
+<Image
+  src="/images/MaranyThea_Profile.jpeg"
+  alt="Marany Thea"
+  fill
+  sizes="(max-width: 768px) 100vw, 50vw"
+  className="object-cover"
+/>
 
               {/* Image Overlay */}
               <div
@@ -332,9 +314,7 @@ export default function Hero() {
                          shadow-xl
                          animate-[float_4s_ease-in-out_infinite]"
             >
-              <p className="text-xs text-gray-500">
-                Currently
-              </p>
+              <p className="text-xs text-gray-500">Currently</p>
 
               <p className="text-sm font-medium text-white">
                 Building & Learning

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import AquaAbout from "../ui/AquaAbout";
 import EducationItem from "@/components/education/EducationItem";
 import { educationItems } from "@/data/education";
 
@@ -10,6 +11,7 @@ export default function Education() {
       id="education"
       className="w-full px-6 py-24 md:px-10 md:py-32"
     >
+      <AquaAbout />
       <div className="mx-auto max-w-7xl">
 
         {/* Header */}
