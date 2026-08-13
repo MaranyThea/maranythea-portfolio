@@ -40,19 +40,28 @@ export default function About() {
     <AnimatedSection>
       <section
         id="about"
-        className="relative max-w-7xl mx-auto px-6 py-12 scroll-mt-14 overflow-hidden"
+        className="relative w-full px-6 py-12 scroll-mt-14"
       >
-        <AquaAbout />
-
         {/* =====================================================
-            AQUA SIGNATURE
+            FULL-WIDTH AQUA BACKGROUND
         ====================================================== */}
 
         <div
           ref={aquaRef}
-          className="pointer-events-none absolute inset-0 overflow-hidden"
+          className="
+            pointer-events-none
+            absolute
+            inset-0
+            overflow-hidden
+          "
         >
-          {/* Main Aqua Glow */}
+          {/* Base Aqua Background */}
+
+          <AquaAbout />
+
+          {/* =================================================
+              MAIN AQUA GLOW
+          ================================================== */}
 
           <div
             className="
@@ -68,7 +77,9 @@ export default function About() {
             "
           />
 
-          {/* Large Fluid Shape */}
+          {/* =================================================
+              LARGE FLUID SHAPE
+          ================================================== */}
 
           <div
             className="
@@ -84,11 +95,14 @@ export default function About() {
             "
           />
 
-          {/* Second Fluid Shape */}
+          {/* =================================================
+              SECOND FLUID SHAPE
+          ================================================== */}
 
           <div
             className="
-              aqua-orb aqua-orb-two
+              aqua-orb
+              aqua-orb-two
               absolute
               top-[45%]
               -left-40
@@ -100,7 +114,9 @@ export default function About() {
             "
           />
 
-          {/* Small Bubbles */}
+          {/* =================================================
+              SMALL BUBBLES
+          ================================================== */}
 
           <span className="aqua-bubble bubble-one" />
           <span className="aqua-bubble bubble-two" />
@@ -108,7 +124,9 @@ export default function About() {
           <span className="aqua-bubble bubble-four" />
           <span className="aqua-bubble bubble-five" />
 
-          {/* Tiny Water Particles */}
+          {/* =================================================
+              TINY WATER PARTICLES
+          ================================================== */}
 
           <span className="aqua-particle particle-one" />
           <span className="aqua-particle particle-two" />
@@ -117,11 +135,13 @@ export default function About() {
         </div>
 
         {/* =====================================================
-            SECTION CONTENT
+            CONTENT CONTAINER
         ====================================================== */}
 
-        <div className="relative z-10">
-          {/* Section Heading */}
+        <div className="relative z-10 max-w-7xl mx-auto">
+          {/* =================================================
+              SECTION HEADING
+          ================================================== */}
 
           <div className="mb-6">
             <p className="text-sm uppercase tracking-[0.3em] text-cyan-400 mb-3">
@@ -133,26 +153,29 @@ export default function About() {
             </h2>
           </div>
 
-          {/* =====================================================
+          {/* =================================================
               MAIN GRID
-          ====================================================== */}
+          ================================================== */}
 
           <div className="grid lg:grid-cols-[1.3fr_0.4fr] gap-10">
-
             {/* =================================================
-                Main Story
-            ================================================= */}
+                MAIN STORY
+            ================================================== */}
 
             <div
               className="
-                group relative
+                group
+                relative
                 rounded-3xl
-                border border-gray-800
+                border
+                border-gray-800
                 bg-gray-950/50
                 backdrop-blur-sm
-                p-8 sm:p-10
+                p-8
+                sm:p-10
                 overflow-hidden
-                transition-all duration-500
+                transition-all
+                duration-500
                 hover:border-cyan-400/40
               "
             >
@@ -192,6 +215,8 @@ export default function About() {
                 "
               />
 
+              {/* Story Content */}
+
               <div className="relative">
                 <h3 className="text-2xl font-semibold text-white mb-6">
                   Building with{" "}
@@ -219,13 +244,15 @@ export default function About() {
 
                   <p>
                     Beyond coding, I&apos;m interested in creativity,
-                    photography, and digital content. I believe good technology
-                    should not only work well — it should also feel intuitive
-                    and meaningful to the people using it.
+                    photography, and digital content. I believe good
+                    technology should not only work well — it should also feel
+                    intuitive and meaningful to the people using it.
                   </p>
                 </div>
 
-                {/* CV Button */}
+                {/* =================================================
+                    CV BUTTON
+                ================================================== */}
 
                 <a
                   href="/pdf/MaranyThea_resume.pdf"
@@ -245,7 +272,8 @@ export default function About() {
                     hover:text-white
                     hover:border-cyan-400
                     hover:bg-cyan-400/10
-                    transition-all duration-300
+                    transition-all
+                    duration-300
                   "
                 >
                   Download CV
@@ -255,7 +283,8 @@ export default function About() {
                     className="
                       group-hover/button:translate-x-1
                       group-hover/button:-translate-y-1
-                      transition-transform duration-300
+                      transition-transform
+                      duration-300
                     "
                   />
                 </a>
@@ -263,8 +292,8 @@ export default function About() {
             </div>
 
             {/* =================================================
-                Personal Information
-            ================================================= */}
+                PERSONAL INFORMATION
+            ================================================== */}
 
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-1">
               <InfoRow
@@ -313,7 +342,6 @@ export default function About() {
   );
 }
 
-
 /* ============================================================
    INFO ROW
 ============================================================ */
@@ -333,23 +361,32 @@ function InfoRow({
 }: InfoRowProps) {
   const content = (
     <>
+      {/* Icon */}
+
       <div
         className="
           shrink-0
-          w-9 h-9
+          w-9
+          h-9
           rounded-lg
-          border border-gray-800
+          border
+          border-gray-800
           bg-gray-900
-          flex items-center justify-center
+          flex
+          items-center
+          justify-center
           text-cyan-400
           group-hover:bg-cyan-400/10
           group-hover:border-cyan-400/30
           group-hover:scale-110
-          transition-all duration-300
+          transition-all
+          duration-300
         "
       >
         {icon}
       </div>
+
+      {/* Text */}
 
       <div className="min-w-0 flex-1">
         <p className="text-[11px] uppercase tracking-wider text-gray-500">
@@ -361,6 +398,8 @@ function InfoRow({
         </p>
       </div>
 
+      {/* Arrow */}
+
       {href && (
         <ArrowUpRight
           size={15}
@@ -370,7 +409,8 @@ function InfoRow({
             group-hover:text-cyan-400
             group-hover:translate-x-1
             group-hover:-translate-y-1
-            transition-all duration-300
+            transition-all
+            duration-300
           "
         />
       )}
@@ -379,18 +419,26 @@ function InfoRow({
 
   const className = `
     group
-    flex items-center gap-3
+    flex
+    items-center
+    gap-3
     min-h-[78px]
     p-4
     rounded-2xl
-    border border-gray-800
+    border
+    border-gray-800
     bg-gray-950/40
     backdrop-blur-sm
     hover:border-cyan-400/40
     hover:-translate-y-1
     hover:shadow-[0_10px_40px_rgba(34,211,238,0.08)]
-    transition-all duration-300
+    transition-all
+    duration-300
   `;
+
+  {/* ============================================================
+      CLICKABLE INFO ROW
+  ============================================================ */}
 
   if (href) {
     return (
@@ -409,5 +457,13 @@ function InfoRow({
     );
   }
 
-  return <div className={className}>{content}</div>;
+  {/* ============================================================
+      NORMAL INFO ROW
+  ============================================================ */}
+
+  return (
+    <div className={className}>
+      {content}
+    </div>
+  );
 }

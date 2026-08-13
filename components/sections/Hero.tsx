@@ -8,12 +8,14 @@ import AnimatedSection from "../ui/animatedSection";
 export default function Hero() {
   return (
     <AnimatedSection>
+
       <section
         className="relative min-h-screen
                    flex items-center
                    px-6 pt-32 pb-20
                    overflow-hidden"
       >
+
         {/* =========================
             Background Effects
         ========================= */}
