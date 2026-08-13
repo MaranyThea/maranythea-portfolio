@@ -4,28 +4,28 @@
   --background: #071c41;
   --foreground: #ecf4f8;
 
-  --storm-blue: #163260;
-  --twilight-blue: #324f7a;
-  --celestial-blue: #1f5f9f;
-  --ozone-blue: #0b71bf;
-  --horizon-blue: #8fc8d8;
-  --cloud-blue: #aac7db;
-  --fog-blue: #789dba;
-  --mist-blue: #c2d8e8;
+  --storm-cyan: #163260;
+  --twilight-cyan: #324f7a;
+  --celestial-cyan: #1f5f9f;
+  --ozone-cyan: #0b71bf;
+  --horizon-cyan: #8fc8d8;
+  --cloud-cyan: #aac7db;
+  --fog-cyan: #789dba;
+  --mist-cyan: #c2d8e8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-storm: var(--storm-blue);
-  --color-twilight: var(--twilight-blue);
-  --color-celestial: var(--celestial-blue);
-  --color-ozone: var(--ozone-blue);
-  --color-horizon: var(--horizon-blue);
-  --color-cloud: var(--cloud-blue);
-  --color-fog: var(--fog-blue);
-  --color-mist: var(--mist-blue);
+  --color-storm: var(--storm-cyan);
+  --color-twilight: var(--twilight-cyan);
+  --color-celestial: var(--celestial-cyan);
+  --color-ozone: var(--ozone-cyan);
+  --color-horizon: var(--horizon-cyan);
+  --color-cloud: var(--cloud-cyan);
+  --color-fog: var(--fog-cyan);
+  --color-mist: var(--mist-cyan);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -43,6 +43,6 @@ body {
 }
 
 ::selection {
-  background: var(--horizon-blue);
+  background: var(--horizon-cyan);
   color: var(--background);
 }

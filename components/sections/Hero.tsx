@@ -18,7 +18,7 @@ export default function Hero() {
             Background Effects
         ========================= */}
         <div className="pointer-events-none absolute inset-0">
-          {/* Blue Glow */}
+          {/* cyan Glow */}
           <div
             className="absolute
                        top-1/4
@@ -26,7 +26,7 @@ export default function Hero() {
                        w-72
                        h-72
                        rounded-full
-                       bg-blue-500/10
+                       bg-cyan-500/10
                        blur-3xl
                        animate-pulse"
           />
@@ -53,7 +53,7 @@ export default function Hero() {
                      w-3
                      h-3
                      rounded-full
-                     bg-blue-400
+                     bg-cyan-400
                      shadow-[0_0_25px_rgba(59,130,246,0.8)]
                      animate-bounce"
         />
@@ -108,7 +108,7 @@ export default function Hero() {
                              h-full
                              w-full
                              rounded-full
-                             bg-blue-400
+                             bg-cyan-400
                              opacity-75
                              animate-ping"
                 />
@@ -119,7 +119,7 @@ export default function Hero() {
                              h-2
                              w-2
                              rounded-full
-                             bg-blue-500"
+                             bg-cyan-500"
                 />
               </span>
               Open to opportunities
@@ -136,7 +136,7 @@ export default function Hero() {
                          leading-[0.95]
                          text-white"
             >
-              Hi, I&apos;m <span className="text-blue-500">Marany.</span>
+              Hi, I&apos;m <span className="text-cyan-500">Marany.</span>
               <br />
               I build things
               <br />
@@ -174,15 +174,15 @@ export default function Hero() {
                            px-6
                            py-3
                            rounded-xl
-                           bg-blue-500
+                           bg-cyan-500
                            text-white
                            font-medium
-                           hover:bg-blue-400
+                           hover:bg-cyan-400
                            transition-all
                            duration-300
                            hover:-translate-y-1
                            shadow-lg
-                           shadow-blue-500/20"
+                           shadow-cyan-500/20"
               >
                 View My Work
                 <ArrowUpRight
@@ -208,7 +208,7 @@ export default function Hero() {
                            border-gray-700
                            text-gray-300
                            hover:text-white
-                           hover:border-blue-500
+                           hover:border-cyan-500
                            transition-all
                            duration-300
                            hover:-translate-y-1"
@@ -226,7 +226,7 @@ export default function Hero() {
                          mt-16
                          text-sm
                          text-gray-500
-                         hover:text-blue-400
+                         hover:text-cyan-400
                          transition-colors
                          duration-300"
             >
@@ -253,7 +253,7 @@ export default function Hero() {
                          sm:w-96
                          sm:h-96
                          rounded-full
-                         bg-blue-500/10
+                         bg-cyan-500/10
                          blur-3xl
                          animate-pulse"
             />
@@ -273,7 +273,7 @@ export default function Hero() {
                          border-gray-700
                          bg-gray-900
                          shadow-2xl
-                         shadow-blue-500/10
+                         shadow-cyan-500/10
                          rotate-2
                          hover:rotate-0
                          transition-transform
@@ -330,13 +330,13 @@ export default function Hero() {
                          h-12
                          rounded-2xl
                          border
-                         border-blue-500/30
-                         bg-blue-500/10
+                         border-cyan-500/30
+                         bg-cyan-500/10
                          backdrop-blur-md
                          flex
                          items-center
                          justify-center
-                         text-blue-400
+                         text-cyan-400
                          animate-bounce"
             >
               <Sparkles size={20} />

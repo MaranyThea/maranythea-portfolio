@@ -46,7 +46,7 @@ export default function Navbar() {
           href="/"
           className="text-xl font-bold text-white shrink-0"
         >
-          Marany<span className="text-blue-500">.dev</span>
+          Marany<span className="text-cyan-500">.dev</span>
         </Link>
 
         {/* Center Navigation */}
@@ -69,7 +69,7 @@ export default function Navbar() {
               <span
                 className="absolute left-0 -bottom-2
                            h-[2px] w-0
-                           bg-blue-500
+                           bg-cyan-500
                            group-hover:w-full
                            transition-all duration-300"
               />

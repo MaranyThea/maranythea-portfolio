@@ -65,7 +65,7 @@ export default function Expertise() {
                 key={item.title}
                 className="group border border-gray-700 rounded-2xl p-6
                            bg-gray-950
-                           hover:border-blue-500
+                           hover:border-cyan-500
                            transition-all duration-300"
               >
                 <div
@@ -73,13 +73,13 @@ export default function Expertise() {
                              rounded-xl bg-gray-900
                              border border-gray-700
                              mb-5
-                             group-hover:bg-blue-500
-                             group-hover:border-blue-500
+                             group-hover:bg-cyan-500
+                             group-hover:border-cyan-500
                              transition-all duration-300"
                 >
                   <Icon
                     size={24}
-                    className="text-blue-400 group-hover:text-white transition-colors"
+                    className="text-cyan-400 group-hover:text-white transition-colors"
                   />
                 </div>
 

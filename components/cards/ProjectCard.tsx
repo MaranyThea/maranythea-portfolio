@@ -22,7 +22,7 @@ export default function ProjectCard({
           <a
             href={liveUrl}
             target="_blank"
-            className="text-blue-500 hover:underline"
+            className="text-cyan-500 hover:underline"
           >
             Live
           </a>

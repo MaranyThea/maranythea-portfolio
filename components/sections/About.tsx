@@ -124,7 +124,7 @@ export default function About() {
           {/* Section Heading */}
 
           <div className="mb-6">
-            <p className="text-sm uppercase tracking-[0.3em] text-blue-400 mb-3">
+            <p className="text-sm uppercase tracking-[0.3em] text-cyan-400 mb-3">
               Get to know me
             </p>
 
@@ -153,7 +153,7 @@ export default function About() {
                 p-8 sm:p-10
                 overflow-hidden
                 transition-all duration-500
-                hover:border-blue-400/40
+                hover:border-cyan-400/40
               "
             >
               {/* Card Aqua Reflection */}
@@ -167,7 +167,7 @@ export default function About() {
                   w-48
                   h-48
                   rounded-full
-                  bg-blue-400/10
+                  bg-cyan-400/10
                   blur-3xl
                   opacity-0
                   group-hover:opacity-100
@@ -186,7 +186,7 @@ export default function About() {
                   w-20
                   h-[2px]
                   bg-gradient-to-r
-                  from-blue-400
+                  from-cyan-400
                   to-transparent
                   opacity-70
                 "
@@ -195,7 +195,7 @@ export default function About() {
               <div className="relative">
                 <h3 className="text-2xl font-semibold text-white mb-6">
                   Building with{" "}
-                  <span className="text-blue-400">
+                  <span className="text-cyan-400">
                     curiosity.
                   </span>
                 </h3>
@@ -243,8 +243,8 @@ export default function About() {
                     border-gray-700
                     text-gray-300
                     hover:text-white
-                    hover:border-blue-400
-                    hover:bg-blue-400/10
+                    hover:border-cyan-400
+                    hover:bg-cyan-400/10
                     transition-all duration-300
                   "
                 >
@@ -341,9 +341,9 @@ function InfoRow({
           border border-gray-800
           bg-gray-900
           flex items-center justify-center
-          text-blue-400
-          group-hover:bg-blue-400/10
-          group-hover:border-blue-400/30
+          text-cyan-400
+          group-hover:bg-cyan-400/10
+          group-hover:border-cyan-400/30
           group-hover:scale-110
           transition-all duration-300
         "
@@ -367,7 +367,7 @@ function InfoRow({
           className="
             shrink-0
             text-gray-600
-            group-hover:text-blue-400
+            group-hover:text-cyan-400
             group-hover:translate-x-1
             group-hover:-translate-y-1
             transition-all duration-300
@@ -386,7 +386,7 @@ function InfoRow({
     border border-gray-800
     bg-gray-950/40
     backdrop-blur-sm
-    hover:border-blue-400/40
+    hover:border-cyan-400/40
     hover:-translate-y-1
     hover:shadow-[0_10px_40px_rgba(34,211,238,0.08)]
     transition-all duration-300

@@ -13,7 +13,7 @@ export default function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <div className="border rounded-xl p-5 hover:shadow-md transition">
-      <h3 className="text-xl font-semibold text-blue-500">
+      <h3 className="text-xl font-semibold text-cyan-500">
         {title}
       </h3>
 

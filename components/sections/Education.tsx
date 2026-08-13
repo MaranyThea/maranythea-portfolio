@@ -23,7 +23,7 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-4 text-xs uppercase tracking-[0.25em] text-blue-400"
+              className="mb-4 text-xs uppercase tracking-[0.25em] text-cyan-400"
             >
               05 / Education
             </motion.p>
@@ -40,7 +40,7 @@ export default function Education() {
             >
               Where I
               <br />
-              <span className="text-blue-400">
+              <span className="text-cyan-400">
                 learned & grew.
               </span>
             </motion.h2>
@@ -56,7 +56,7 @@ export default function Education() {
             }}
             className="flex items-end md:justify-end"
           >
-            <p className="max-w-md text-sm leading-7 text-blue-200 md:text-right">
+            <p className="max-w-md text-sm leading-7 text-cyan-200 md:text-right">
               A collection of my formal education, professional
               courses, certifications, and learning experiences that
               have shaped my technical foundation.

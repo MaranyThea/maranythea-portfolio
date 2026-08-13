@@ -89,7 +89,7 @@ export default function AquaBackground() {
       />
 
       <motion.div
-        className="absolute left-[-10%] top-[55%] h-[1px] w-[120%] bg-gradient-to-r from-transparent via-teal-300/15 to-transparent"
+        className="absolute left-[-10%] top-[55%] h-[1px] w-[120%] bg-gradient-to-r from-transparent via-cyan-300/15 to-transparent"
         animate={{
           rotate: [6, -5, 6],
           y: [0, -120, 0],

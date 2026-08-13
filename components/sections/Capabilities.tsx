@@ -108,7 +108,7 @@ export default function Capabilities() {
         ========================= */}
 
         <div className="mb-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-blue-400 mb-3">
+          <p className="text-sm uppercase tracking-[0.3em] text-cyan-400 mb-3">
             What I specialize in
           </p>
 
@@ -155,8 +155,8 @@ export default function Capabilities() {
 
                     ${
                       isActive
-                        ? "border-blue-500/50 bg-blue-500/[0.08]"
-                        : "border-gray-800 bg-gray-950/40 hover:border-blue-500/40 hover:bg-gray-900/60"
+                        ? "border-cyan-500/50 bg-cyan-500/[0.08]"
+                        : "border-gray-800 bg-gray-950/40 hover:border-cyan-500/40 hover:bg-gray-900/60"
                     }
                   `}
                 >
@@ -169,8 +169,8 @@ export default function Capabilities() {
                       transition-colors duration-300
                       ${
                         isActive
-                          ? "text-blue-400"
-                          : "text-gray-600 group-hover:text-blue-400"
+                          ? "text-cyan-400"
+                          : "text-gray-600 group-hover:text-cyan-400"
                       }
                     `}
                   >
@@ -189,8 +189,8 @@ export default function Capabilities() {
 
                       ${
                         isActive
-                          ? "bg-blue-500 border-blue-500 text-white"
-                          : "bg-gray-900 border-gray-800 text-blue-400 group-hover:bg-blue-500 group-hover:border-blue-500 group-hover:text-white"
+                          ? "bg-cyan-500 border-cyan-500 text-white"
+                          : "bg-gray-900 border-gray-800 text-cyan-400 group-hover:bg-cyan-500 group-hover:border-cyan-500 group-hover:text-white"
                       }
                     `}
                   >
@@ -225,7 +225,7 @@ export default function Capabilities() {
 
                       ${
                         isActive
-                          ? "bg-blue-400 opacity-100"
+                          ? "bg-cyan-400 opacity-100"
                           : "bg-transparent opacity-0"
                       }
                     `}
@@ -263,7 +263,7 @@ export default function Capabilities() {
                 w-72
                 h-72
                 rounded-full
-                bg-blue-500/10
+                bg-cyan-500/10
                 blur-3xl
               "
             />
@@ -277,7 +277,7 @@ export default function Capabilities() {
                 w-72
                 h-72
                 rounded-full
-                bg-blue-500/[0.06]
+                bg-cyan-500/[0.06]
                 blur-3xl
               "
             />
@@ -289,7 +289,7 @@ export default function Capabilities() {
             {activeCapability === null && (
               <div className="relative h-full flex flex-col justify-center">
 
-                <p className="text-xs uppercase tracking-[0.3em] text-blue-400 mb-4">
+                <p className="text-xs uppercase tracking-[0.3em] text-cyan-400 mb-4">
                   Primary Specialization
                 </p>
 
@@ -354,7 +354,7 @@ export default function Capabilities() {
                           border border-gray-800
                           bg-gray-900
                           text-sm text-gray-300
-                          hover:border-blue-500/40
+                          hover:border-cyan-500/40
                           hover:text-white
                           transition-all duration-300
                         "
@@ -381,7 +381,7 @@ export default function Capabilities() {
 
                 {/* Number */}
 
-                <p className="text-sm text-blue-400 mb-5 tracking-widest">
+                <p className="text-sm text-cyan-400 mb-5 tracking-widest">
                   {activeCapability.number}
                 </p>
 
@@ -416,7 +416,7 @@ export default function Capabilities() {
                           border border-gray-800
                           bg-gray-900
                           text-sm text-gray-300
-                          hover:border-blue-500/40
+                          hover:border-cyan-500/40
                           hover:text-white
                           transition-all duration-300
                         "

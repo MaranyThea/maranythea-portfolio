@@ -224,7 +224,7 @@ export default function AquaAbout() {
           w-[420px]
           h-[420px]
           rounded-full
-          bg-blue-500/20
+          bg-cyan-500/20
           blur-[90px]
         "
       />
@@ -260,7 +260,7 @@ export default function AquaAbout() {
           w-[240px]
           h-[240px]
           rounded-full
-          bg-blue-400/15
+          bg-cyan-400/15
           blur-[70px]
         "
       />
@@ -311,7 +311,7 @@ export default function AquaAbout() {
           w-3
           h-3
           rounded-full
-          bg-blue-400/40
+          bg-cyan-400/40
         "
       />
 
@@ -338,7 +338,7 @@ export default function AquaAbout() {
           w-4
           h-4
           rounded-full
-          bg-blue-300/30
+          bg-cyan-300/30
         "
       />
 
@@ -364,7 +364,7 @@ export default function AquaAbout() {
           w-3
           h-3
           rounded-full
-          bg-blue-400/30
+          bg-cyan-400/30
         "
       />
     </div>
