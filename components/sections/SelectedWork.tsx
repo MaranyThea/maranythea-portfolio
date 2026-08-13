@@ -316,7 +316,7 @@ export default function SelectedWork() {
                       {project.technologies.map((technology) => (
                         <span
                           key={technology}
-                          className="rounded-full border border-white/10 px-3 py-1.5 text-[11px] text-white/40 transition-colors duration-300 group-hover:border-[#00B4D8]/20 group-hover:text-white/60"
+                          className="rounded-full border border-white/10 px-3 py-1.5 text-[11px] text-white/80 transition-colors duration-300 group-hover:border-[#00B4D8]/20 group-hover:text-white/60"
                         >
                           {technology}
                         </span>

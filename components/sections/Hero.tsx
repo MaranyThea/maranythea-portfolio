@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Sparkles } from "lucide-react";
 import AnimatedSection from "../ui/animatedSection";
+import TypingText from "@/components/ui/TypingText";
 
 export default function Hero() {
   return (
@@ -128,22 +129,35 @@ export default function Hero() {
             </div>
 
             {/* Heading */}
-            <h1
-              className="text-5xl
-                         sm:text-6xl
-                         lg:text-7xl
-                         xl:text-8xl
-                         font-bold
-                         tracking-tight
-                         leading-[0.95]
-                         text-white"
-            >
-              Hi, I&apos;m <span className="text-cyan-500">Marany.</span>
-              <br />
-              I build things
-              <br />
-              <span className="text-gray-500">for the web.</span>
-            </h1>
+<h1
+  className="
+    text-5xl
+    sm:text-6xl
+    lg:text-7xl
+    xl:text-8xl
+    font-bold
+    tracking-tight
+    leading-[0.95]
+    text-white
+  "
+>
+  Hi, I&apos;m{" "}
+
+<TypingText
+  text="Marany."
+  speed={120}
+  delay={500}
+/>
+
+  <br />
+
+  I build things
+  <br />
+
+  <span className="text-gray-500">
+    for the web.
+  </span>
+</h1>
 
             {/* Description */}
             <p

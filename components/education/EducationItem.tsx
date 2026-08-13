@@ -48,11 +48,11 @@ export default function EducationItem({
             {education.title}
           </h3>
 
-          <p className="mt-2 text-lg text-neutral-500">
+          <p className="mt-2 text-lg text-neutral-400">
             {education.institution}
           </p>
 
-          <p className="mt-6 max-w-2xl text-sm leading-7 text-neutral-600">
+          <p className="mt-6 max-w-2xl text-sm leading-7 text-neutral-400">
             {education.description}
           </p>
 
@@ -62,7 +62,7 @@ export default function EducationItem({
               {education.details.map((detail) => (
                 <span
                   key={detail}
-                  className="text-xs text-neutral-500"
+                  className="text-xs text-neutral-400"
                 >
                   {detail}
                 </span>
@@ -77,7 +77,7 @@ export default function EducationItem({
                 {education.technologies.map((technology) => (
                   <span
                     key={technology}
-                    className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-600"
+                    className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-200"
                   >
                     {technology}
                   </span>
