@@ -9,21 +9,21 @@ const professionalWork = [
     id: "01",
     role: "Technical / IT Support",
     company: "Department of Social Affairs",
-    period: "2021 — 2023",
+    period: "Jan 2021 — Dec 2023",
     logo: "/images/MoSVY.jpeg",
     description:
-      "Provided technical support, data management, file organization, and assistance with day-to-day digital operations.",
-    skills: ["IT Support", "Data Management", "File Management"],
+      "Provided IT and technical support, managed digital files and data, assisted with daily digital operations, and supported workshops and organizational activities to ensure smooth and efficient operations.",
+    skills: ["IT Support", "Data Management", "File Management", "Technical Assistance", "Workshop Support", "Digital Operations"],
   },
   {
     id: "02",
     role: "Software / Technical Work",
     company: "Private Software Development",
-    period: "2025",
+    period: "Jan 2024 — Aug 2025",
     logo: "/images/glean.jpg",
     description:
-      "Worked in a software development environment, contributing to technical tasks, testing, and development workflows.",
-    skills: ["Software Development", "QA", "K6"],
+      "Developed web solutions using Liferay and React, integrated REST APIs and databases for data management, built Make automation workflows for data transfer and system integration, and supported troubleshooting and reliable project delivery.",
+    skills: ["Software Development", "QA", "Liferay", "React", "REST API", "Make", "K6"],
   },
 ];
 
