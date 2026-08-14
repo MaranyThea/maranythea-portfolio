@@ -8,22 +8,37 @@ const professionalWork = [
   {
     id: "01",
     role: "Technical / IT Support",
-    company: "Department of Social Affairs",
+    company: "Department of Social Affairs, Veterans and Youth Rehabilitation (DoSVY)",
     period: "Jan 2021 — Dec 2023",
     logo: "/images/MoSVY.jpeg",
     description:
       "Provided IT and technical support, managed digital files and data, assisted with daily digital operations, and supported workshops and organizational activities to ensure smooth and efficient operations.",
-    skills: ["IT Support", "Data Management", "File Management", "Technical Assistance", "Workshop Support", "Digital Operations"],
+    skills: [
+      "IT Support",
+      "Data Management",
+      "File Management",
+      "Technical Assistance",
+      "Workshop Support",
+      "Digital Operations",
+    ],
   },
   {
     id: "02",
-    role: "Software / Technical Work",
-    company: "Private Software Development",
+    role: "Software Engineer / Frontend Developer",
+    company: "Glean Asia Co, Ltd.",
     period: "Jan 2024 — Aug 2025",
     logo: "/images/glean.jpg",
     description:
       "Developed web solutions using Liferay and React, integrated REST APIs and databases for data management, built Make automation workflows for data transfer and system integration, and supported troubleshooting and reliable project delivery.",
-    skills: ["Software Development", "QA", "Liferay", "React", "REST API", "Make", "K6"],
+    skills: [
+      "Software Development",
+      "QA",
+      "Liferay",
+      "React",
+      "REST API",
+      "Make",
+      "K6",
+    ],
   },
 ];
 
@@ -284,7 +299,7 @@ export default function SelectedWork() {
                     <div className="flex items-start justify-between gap-2">
                       <div>
                         <span className="text-[10px] uppercase tracking-[0.25em] text-white/30">
-                          {project.period}  |  {project.type}
+                          {project.period} | {project.type}
                         </span>
 
                         <h4 className="mt-2 text-2xl font-medium transition-colors duration-300 group-hover:text-[#00B4D8]">

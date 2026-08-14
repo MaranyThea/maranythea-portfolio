@@ -255,7 +255,7 @@ export default function About() {
                 ================================================== */}
 
                 <a
-                  href="/pdf/MaranyThea_resume.pdf"
+                  href="/pdf/MaranyThea_FullStack_Developer.pdf"
                   download
                   className="
                     group/button
