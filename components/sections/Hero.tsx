@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Sparkles } from "lucide-react";
-import AnimatedSection from "../ui/animatedSection";
+import AnimatedSection from "../ui/AnimatedSection";
 import TypingText from "@/components/ui/TypingText";
 
 export default function Hero() {

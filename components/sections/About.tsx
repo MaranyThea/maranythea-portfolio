@@ -11,7 +11,7 @@ import {
   Globe,
   ArrowUpRight,
 } from "lucide-react";
-import AnimatedSection from "../ui/animatedSection";
+import AnimatedSection from "../ui/AnimatedSection";
 
 export default function About() {
   const aquaRef = useRef<HTMLDivElement>(null);
