@@ -13,7 +13,7 @@ export default function Hero() {
       <section
         className="relative min-h-screen
                    flex items-center
-                   px-6 pt-32 pb-20
+                   px-4 sm:px-6 pt-28 sm:pt-32 pb-16 sm:pb-20
                    overflow-hidden"
       >
 
@@ -131,29 +131,27 @@ export default function Hero() {
             {/* Heading */}
 <h1
   className="
-    text-5xl
-    sm:text-6xl
+    text-3xl
+    sm:text-5xl
+    md:text-6xl
     lg:text-7xl
     xl:text-8xl
     font-bold
     tracking-tight
-    leading-[0.95]
+    leading-[1.1]
+    sm:leading-[0.98]
     text-white
   "
 >
   Hi, I&apos;m{" "}
-
-<TypingText
-  text="Marany."
-  speed={120}
-  delay={500}
-/>
-
+  <TypingText
+    text="Marany."
+    speed={120}
+    delay={500}
+  />
   <br />
-
   I build things
   <br />
-
   <span className="text-gray-500">
     for the web.
   </span>
@@ -161,10 +159,13 @@ export default function Hero() {
 
             {/* Description */}
             <p
-              className="mt-8
+              className="mt-6
+                         sm:mt-8
                          max-w-2xl
-                         text-lg
-                         leading-8
+                         text-base
+                         sm:text-lg
+                         leading-7
+                         sm:leading-8
                          text-gray-400"
             >
               A Computer Science & Engineering graduate passionate about
@@ -175,20 +176,25 @@ export default function Hero() {
             {/* Buttons */}
             <div
               className="flex
-                         flex-wrap
-                         items-center
-                         gap-4
-                         mt-10"
+                         flex-col
+                         sm:flex-row
+                         items-stretch
+                         sm:items-center
+                         gap-3
+                         sm:gap-4
+                         mt-8
+                         sm:mt-10"
             >
               {/* Primary Button */}
               <Link
-                href="#projects"
+                href="#work"
                 className="group
                            inline-flex
                            items-center
+                           justify-center
                            gap-2
                            px-6
-                           py-3
+                           py-3.5
                            rounded-xl
                            bg-cyan-500
                            text-white
@@ -198,7 +204,8 @@ export default function Hero() {
                            duration-300
                            hover:-translate-y-1
                            shadow-lg
-                           shadow-cyan-500/20"
+                           shadow-cyan-500/20
+                           text-center"
               >
                 View My Work
                 <ArrowUpRight
@@ -211,14 +218,15 @@ export default function Hero() {
               </Link>
 
               {/* Secondary Button */}
-              <Link
-                href="#contact"
+              <a
+                href="mailto:thea.marany@gmail.com"
                 className="group
                            inline-flex
                            items-center
+                           justify-center
                            gap-2
                            px-6
-                           py-3
+                           py-3.5
                            rounded-xl
                            border
                            border-gray-700
@@ -227,10 +235,11 @@ export default function Hero() {
                            hover:border-cyan-500
                            transition-all
                            duration-300
-                           hover:-translate-y-1"
+                           hover:-translate-y-1
+                           text-center"
               >
                 Let&apos;s Talk
-              </Link>
+              </a>
             </div>
 
             {/* Scroll Indicator */}
@@ -239,7 +248,8 @@ export default function Hero() {
               className="inline-flex
                          items-center
                          gap-3
-                         mt-16
+                         mt-12
+                         sm:mt-16
                          text-sm
                          text-gray-500
                          hover:text-cyan-400
@@ -259,13 +269,16 @@ export default function Hero() {
             className="relative
                        flex
                        justify-center
-                       lg:justify-end"
+                       lg:justify-end
+                       mt-6
+                       lg:mt-0
+                       px-4"
           >
             {/* Outer Glow */}
             <div
               className="absolute
-                         w-80
-                         h-80
+                         w-64
+                         h-64
                          sm:w-96
                          sm:h-96
                          rounded-full
@@ -277,38 +290,41 @@ export default function Hero() {
             {/* Image Container */}
             <div
               className="relative
-                         w-72
-                         h-96
+                         w-64
+                         h-80
                          sm:w-80
                          sm:h-[440px]
                          lg:w-96
                          lg:h-[500px]
-                         rounded-[2rem]
+                         rounded-3xl
+                         sm:rounded-[2rem]
                          overflow-hidden
                          border
                          border-gray-700
                          bg-gray-900
                          shadow-2xl
                          shadow-cyan-500/10
-                         rotate-2
+                         rotate-1
+                         sm:rotate-2
                          hover:rotate-0
                          transition-transform
                          duration-500"
             >
-<Image
-  src="/images/MaranyThea_Profile.jpeg"
-  alt="Marany Thea"
-  fill
-  sizes="(max-width: 768px) 100vw, 50vw"
-  className="object-cover"
-/>
+              <Image
+                src="/images/MaranyThea_Profile.jpeg"
+                alt="Marany Thea"
+                fill
+                sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
+                priority
+                className="object-cover"
+              />
 
               {/* Image Overlay */}
               <div
                 className="absolute
                            inset-0
                            bg-gradient-to-t
-                           from-black/50
+                           from-black/60
                            via-transparent
                            to-transparent"
               />
@@ -317,12 +333,15 @@ export default function Hero() {
             {/* Floating Label */}
             <div
               className="absolute
-                         -bottom-5
-                         -left-4
-                         sm:left-0
-                         px-5
-                         py-3
-                         rounded-2xl
+                         -bottom-4
+                         -left-1
+                         sm:-left-4
+                         px-4
+                         py-2.5
+                         sm:px-5
+                         sm:py-3
+                         rounded-xl
+                         sm:rounded-2xl
                          border
                          border-gray-700
                          bg-gray-950/90
@@ -330,9 +349,9 @@ export default function Hero() {
                          shadow-xl
                          animate-[float_4s_ease-in-out_infinite]"
             >
-              <p className="text-xs text-gray-500">Currently</p>
+              <p className="text-[11px] sm:text-xs text-gray-500">Currently</p>
 
-              <p className="text-sm font-medium text-white">
+              <p className="text-xs sm:text-sm font-medium text-white">
                 Building & Learning
               </p>
             </div>
@@ -340,11 +359,15 @@ export default function Hero() {
             {/* Floating Accent */}
             <div
               className="absolute
-                         -top-5
-                         -right-4
-                         w-12
-                         h-12
-                         rounded-2xl
+                         -top-4
+                         -right-1
+                         sm:-right-4
+                         w-10
+                         h-10
+                         sm:w-12
+                         sm:h-12
+                         rounded-xl
+                         sm:rounded-2xl
                          border
                          border-cyan-500/30
                          bg-cyan-500/10
@@ -355,7 +378,7 @@ export default function Hero() {
                          text-cyan-400
                          animate-bounce"
             >
-              <Sparkles size={20} />
+              <Sparkles size={18} />
             </div>
           </div>
         </div>

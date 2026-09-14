@@ -9,7 +9,7 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="relative w-full px-6 py-12 md:px-10 md:py-24"
+      className="relative w-full px-4 sm:px-6 md:px-10 py-16 sm:py-24"
     >
       {/* Aqua Background */}
       <AquaAbout />
@@ -20,7 +20,7 @@ export default function Education() {
             HEADER
         ====================================================== */}
 
-        <div className="mb-8 grid gap-8 md:grid-cols-2">
+        <div className="mb-8 sm:mb-12 grid gap-6 sm:gap-8 md:grid-cols-2">
           {/* Left */}
           <div>
             {/* Section Label */}
@@ -29,7 +29,7 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-5 flex items-center gap-3"
+              className="mb-4 sm:mb-5 flex items-center gap-3"
             >
               <span className="h-px w-8 bg-[#00B4D8]" />
 
@@ -47,11 +47,11 @@ export default function Education() {
                 duration: 0.7,
                 delay: 0.1,
               }}
-              className="max-w-3xl text-5xl font-medium tracking-tight md:text-7xl"
+              className="max-w-3xl text-3xl sm:text-5xl md:text-7xl font-medium tracking-tight text-white"
             >
               Where I
               <br />
-              <span className="text-gray-400">
+              <span className="text-gray-500">
                 learned & grew.
               </span>
             </motion.h2>
@@ -68,7 +68,7 @@ export default function Education() {
             }}
             className="flex items-end md:justify-end"
           >
-            <p className="max-w-md text-sm leading-7 text-gray-500 md:text-right">
+            <p className="max-w-md text-xs sm:text-sm leading-6 sm:leading-7 text-gray-400 md:text-right">
               A collection of my formal education, professional
               courses, certifications, and learning experiences that
               have shaped my technical foundation.
@@ -105,12 +105,12 @@ export default function Education() {
             items-center
             justify-between
             border-t
-            border-neutral-300
+            border-white/10
             pt-6
             text-xs
             uppercase
             tracking-[0.2em]
-            text-neutral-400
+            text-white/30
           "
         >
           <span>Education</span>

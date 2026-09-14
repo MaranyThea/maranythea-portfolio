@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,9 +12,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#050505",
+};
+
 export const metadata: Metadata = {
-  title: "Marany.dev",
-  description: "Marany Thea — Software Engineer Portfolio",
+  title: "Marany.dev — Software Engineer",
+  description: "Marany Thea — Software Engineer Portfolio. Building modern digital experiences with web technologies, data, cloud, and AI.",
 };
 
 export default function RootLayout({

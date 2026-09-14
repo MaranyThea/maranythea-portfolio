@@ -26,15 +26,16 @@ export default function EducationItem({
       className="
         group
         border-t
-        border-neutral-300
-        py-10
-        md:py-8
+        border-white/10
+        py-8
+        sm:py-10
       "
     >
       <div
         className="
           grid
-          gap-8
+          gap-4
+          sm:gap-6
           md:grid-cols-[160px_1fr]
           lg:grid-cols-[180px_1fr]
         "
@@ -44,18 +45,20 @@ export default function EducationItem({
         ====================================================== */}
 
         <div>
-          <p
+          <span
             className="
-              text-xs
+              inline-block
+              text-[11px]
               uppercase
               tracking-[0.2em]
-              text-neutral-500
+              text-cyan-400/80
+              font-mono
             "
           >
             {education.type}
-          </p>
+          </span>
 
-          <p className="mt-4 text-sm text-neutral-400">
+          <p className="mt-1 sm:mt-3 text-xs sm:text-sm text-gray-500 font-mono">
             {education.period}
           </p>
         </div>
@@ -69,28 +72,34 @@ export default function EducationItem({
           <h3
             className="
               max-w-4xl
-              text-2xl
+              text-xl
+              sm:text-2xl
+              md:text-3xl
               font-medium
               tracking-tight
-              text-neutral-100
-              md:text-3xl
+              text-white
+              group-hover:text-cyan-400
+              transition-colors
+              duration-300
             "
           >
             {education.title}
           </h3>
 
           {/* University */}
-          <div className="mt-4 flex items-center gap-4">
+          <div className="mt-3 sm:mt-4 flex items-center gap-3 sm:gap-4">
             {education.logo && (
               <div
                 className="
-                  h-12
-                  w-12
+                  h-10
+                  w-10
+                  sm:h-12
+                  sm:w-12
                   shrink-0
                   overflow-hidden
                   rounded-xl
                   border
-                  border-neutral-300
+                  border-white/10
                   bg-white
                 "
               >
@@ -104,7 +113,7 @@ export default function EducationItem({
               </div>
             )}
 
-            <p className="text-lg text-neutral-400">
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 font-medium">
               {education.institution}
             </p>
           </div>
@@ -112,11 +121,14 @@ export default function EducationItem({
           {/* Description */}
           <p
             className="
-              mt-7
+              mt-4
+              sm:mt-6
               max-w-3xl
-              text-sm
-              leading-7
-              text-neutral-400
+              text-xs
+              sm:text-sm
+              leading-6
+              sm:leading-7
+              text-gray-400
             "
           >
             {education.description}
@@ -124,13 +136,16 @@ export default function EducationItem({
 
           {/* Details */}
           {education.details && education.details.length > 0 && (
-            <div className="mt-7 flex flex-wrap gap-x-8 gap-y-3">
+            <div className="mt-4 sm:mt-6 flex flex-wrap gap-x-4 sm:gap-x-6 gap-y-2">
               {education.details.map((detail) => (
                 <span
                   key={detail}
                   className="
                     text-xs
-                    text-neutral-400
+                    text-gray-400/80
+                    before:content-['•']
+                    before:mr-1.5
+                    before:text-cyan-400/60
                   "
                 >
                   {detail}
@@ -142,18 +157,22 @@ export default function EducationItem({
           {/* Technologies */}
           {education.technologies &&
             education.technologies.length > 0 && (
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-4 sm:mt-6 flex flex-wrap gap-2">
                 {education.technologies.map((technology) => (
                   <span
                     key={technology}
                     className="
                       rounded-full
                       border
-                      border-neutral-300
-                      px-3
-                      py-1.5
-                      text-xs
-                      text-neutral-200
+                      border-white/10
+                      bg-white/[0.02]
+                      px-2.5
+                      sm:px-3
+                      py-1
+                      sm:py-1.5
+                      text-[11px]
+                      sm:text-xs
+                      text-gray-300
                       transition-colors
                       duration-300
                       group-hover:border-cyan-400/40

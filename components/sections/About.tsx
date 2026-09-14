@@ -40,7 +40,7 @@ export default function About() {
     <AnimatedSection>
       <section
         id="about"
-        className="relative w-full px-6 py-12 scroll-mt-14"
+        className="relative w-full px-4 sm:px-6 py-12 sm:py-20 scroll-mt-14"
       >
         {/* =====================================================
             FULL-WIDTH AQUA BACKGROUND
@@ -143,12 +143,12 @@ export default function About() {
               SECTION HEADING
           ================================================== */}
 
-          <div className="mb-6">
-            <p className="text-sm uppercase tracking-[0.3em] text-cyan-400 mb-3">
+          <div className="mb-8">
+            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-cyan-400 mb-2 sm:mb-3">
               Get to know me
             </p>
 
-            <h2 className="text-4xl sm:text-5xl font-bold text-white">
+            <h2 className="text-3xl sm:text-5xl font-bold text-white">
               About Me
             </h2>
           </div>
@@ -157,7 +157,7 @@ export default function About() {
               MAIN GRID
           ================================================== */}
 
-          <div className="grid lg:grid-cols-[1.3fr_0.4fr] gap-10">
+          <div className="grid lg:grid-cols-[1.25fr_0.75fr] gap-6 sm:gap-10">
             {/* =================================================
                 MAIN STORY
             ================================================== */}
@@ -166,12 +166,13 @@ export default function About() {
               className="
                 group
                 relative
-                rounded-3xl
+                rounded-2xl
+                sm:rounded-3xl
                 border
                 border-gray-800
                 bg-gray-950/50
                 backdrop-blur-sm
-                p-8
+                p-6
                 sm:p-10
                 overflow-hidden
                 transition-all
@@ -218,14 +219,14 @@ export default function About() {
               {/* Story Content */}
 
               <div className="relative">
-                <h3 className="text-2xl font-semibold text-white mb-6">
+                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6">
                   Building with{" "}
                   <span className="text-cyan-400">
                     curiosity.
                   </span>
                 </h3>
 
-                <div className="space-y-5 text-gray-400 leading-8">
+                <div className="space-y-4 sm:space-y-5 text-sm sm:text-base text-gray-400 leading-7 sm:leading-8">
                   <p>
                     I&apos;m{" "}
                     <span className="text-white font-medium">
@@ -261,8 +262,10 @@ export default function About() {
                     group/button
                     inline-flex
                     items-center
+                    justify-center
                     gap-2
-                    mt-8
+                    mt-6
+                    sm:mt-8
                     px-5
                     py-3
                     rounded-xl
@@ -274,9 +277,11 @@ export default function About() {
                     hover:bg-cyan-400/10
                     transition-all
                     duration-300
+                    text-sm
+                    font-medium
                   "
                 >
-                  Download CV
+                  <span>Download CV</span>
 
                   <ArrowUpRight
                     size={17}
@@ -295,7 +300,7 @@ export default function About() {
                 PERSONAL INFORMATION
             ================================================== */}
 
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 sm:gap-4">
               <InfoRow
                 icon={<User size={18} />}
                 label="Name"
@@ -378,7 +383,7 @@ function InfoRow({
           text-cyan-400
           group-hover:bg-cyan-400/10
           group-hover:border-cyan-400/30
-          group-hover:scale-110
+          group-hover:scale-105
           transition-all
           duration-300
         "
@@ -393,7 +398,7 @@ function InfoRow({
           {label}
         </p>
 
-        <p className="mt-1 text-sm font-medium text-white break-words">
+        <p className="mt-0.5 text-sm font-medium text-white break-all sm:break-words">
           {value}
         </p>
       </div>
@@ -422,15 +427,18 @@ function InfoRow({
     flex
     items-center
     gap-3
-    min-h-[78px]
-    p-4
-    rounded-2xl
+    min-h-[72px]
+    sm:min-h-[78px]
+    p-3.5
+    sm:p-4
+    rounded-xl
+    sm:rounded-2xl
     border
     border-gray-800
     bg-gray-950/40
     backdrop-blur-sm
     hover:border-cyan-400/40
-    hover:-translate-y-1
+    hover:-translate-y-0.5
     hover:shadow-[0_10px_40px_rgba(34,211,238,0.08)]
     transition-all
     duration-300

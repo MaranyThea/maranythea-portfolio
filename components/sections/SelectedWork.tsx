@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import AquaAbout from "../ui/AquaAbout";
-import { ArrowUpRight, Briefcase, Code2 } from "lucide-react";
+import { ArrowUpRight, Briefcase, Code2, GitBranch } from "lucide-react";
+
 const professionalWork = [
   {
     id: "01",
@@ -52,7 +53,7 @@ const personalProjects = [
     technologies: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     type: "Featured",
     link: "#",
-    github: "#",
+    github: "https://github.com/MaranyThea",
   },
   {
     id: "02",
@@ -63,7 +64,7 @@ const personalProjects = [
     technologies: ["React", "TypeScript", "CSS"],
     type: "Web App",
     link: "#",
-    github: "#",
+    github: "https://github.com/MaranyThea",
   },
   {
     id: "03",
@@ -74,7 +75,7 @@ const personalProjects = [
     technologies: ["React", "API", "JavaScript"],
     type: "Web App",
     link: "#",
-    github: "#",
+    github: "https://github.com/MaranyThea",
   },
 ];
 
@@ -82,7 +83,7 @@ export default function SelectedWork() {
   return (
     <section
       id="work"
-      className="relative w-full overflow-hidden px-6 py-24 text-white md:px-10 lg:px-16"
+      className="relative w-full overflow-hidden px-4 sm:px-6 md:px-10 lg:px-16 py-16 sm:py-24 text-white"
     >
       <AquaAbout />
 
@@ -95,7 +96,7 @@ export default function SelectedWork() {
           transition={{ duration: 0.7 }}
           className="mb-10 max-w-3xl"
         >
-          <div className="mb-5 flex items-center gap-3">
+          <div className="mb-4 sm:mb-5 flex items-center gap-3">
             <span className="h-px w-8 bg-[#00B4D8]" />
 
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-[#00B4D8]">
@@ -103,11 +104,11 @@ export default function SelectedWork() {
             </span>
           </div>
 
-          <h2 className="text-4xl font-semibold tracking-tight md:text-6xl">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight">
             Things I&apos;ve <span className="text-white/40">worked on.</span>
           </h2>
 
-          <p className="mt-4 max-w-2xl text-base leading-7 text-white/50 md:text-lg">
+          <p className="mt-3 sm:mt-4 max-w-2xl text-sm sm:text-base md:text-lg leading-6 sm:leading-7 text-white/50">
             A selection of professional experiences and personal projects that
             represent how I work, what I build, and what I&apos;m continuously
             learning.
@@ -125,12 +126,12 @@ export default function SelectedWork() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.7 }}
-            className="border-b border-white/10 pb-16 lg:border-b-0 lg:border-r lg:pr-12 "
+            className="border-b border-white/10 pb-12 sm:pb-16 lg:border-b-0 lg:border-r lg:pr-12"
           >
             {/* Section heading */}
             <div className="mb-6 flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03]">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03]">
                   <Briefcase
                     size={18}
                     strokeWidth={1.5}
@@ -139,11 +140,7 @@ export default function SelectedWork() {
                 </div>
 
                 <div>
-                  {/* <p className="text-xs uppercase tracking-[0.2em] text-white/40">
-                    01
-                  </p> */}
-
-                  <h3 className="mt-1 text-xl font-medium">
+                  <h3 className="text-lg sm:text-xl font-medium">
                     Professional Work
                   </h3>
                 </div>
@@ -166,12 +163,12 @@ export default function SelectedWork() {
                     duration: 0.5,
                     delay: index * 0.1,
                   }}
-                  className="group border-t border-white/10 py-6"
+                  className="group border-t border-white/10 py-5 sm:py-6"
                 >
-                  <div className="mb-5 flex items-start justify-between gap-4">
-                    <div className="flex items-start gap-4">
+                  <div className="mb-4 flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-4">
+                    <div className="flex items-start gap-3.5 sm:gap-4">
                       {/* Company Logo */}
-                      <div className="mt-2 flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
+                      <div className="mt-1 flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
                         {work.logo ? (
                           <Image
                             src={work.logo}
@@ -190,35 +187,32 @@ export default function SelectedWork() {
                       </div>
 
                       {/* Role + Company */}
-                      <div>
-                        {/* <span className="text-xs tracking-[0.2em] text-[#00B4D8]">
-      </span> */}
-
-                        <h4 className="mt-2 text-xl font-medium text-white transition-colors duration-300 group-hover:text-[#00B4D8]">
+                      <div className="min-w-0 flex-1">
+                        <h4 className="text-lg sm:text-xl font-medium text-white transition-colors duration-300 group-hover:text-[#00B4D8]">
                           {work.role}
                         </h4>
 
-                        <p className="mt-1 text-sm text-white/40">
+                        <p className="mt-0.5 text-xs sm:text-sm text-white/40 leading-snug">
                           {work.company}
                         </p>
                       </div>
                     </div>
 
                     {/* Period */}
-                    <span className="whitespace-nowrap pt-1 text-xs text-white/30">
+                    <span className="sm:whitespace-nowrap pt-0 sm:pt-1 text-xs text-[#00B4D8]/80 sm:text-white/30 font-mono">
                       {work.period}
                     </span>
                   </div>
 
-                  <p className="max-w-xl text-sm leading-6 text-white/50">
+                  <p className="max-w-xl text-xs sm:text-sm leading-6 text-white/50">
                     {work.description}
                   </p>
 
-                  <div className="mt-5 flex flex-wrap gap-2">
+                  <div className="mt-4 sm:mt-5 flex flex-wrap gap-2">
                     {work.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 text-[11px] text-white/40 transition-colors duration-300 group-hover:border-[#00B4D8]/20 group-hover:text-white/60"
+                        className="rounded-full border border-white/10 bg-white/[0.02] px-2.5 sm:px-3 py-1 sm:py-1.5 text-[11px] text-white/40 transition-colors duration-300 group-hover:border-[#00B4D8]/20 group-hover:text-white/60"
                       >
                         {skill}
                       </span>
@@ -238,12 +232,12 @@ export default function SelectedWork() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.7 }}
-            className="pt-16 lg:pl-12 lg:pt-0"
+            className="pt-12 sm:pt-16 lg:pl-12 lg:pt-0"
           >
             {/* Section heading */}
             <div className="mb-6 flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10  bg-white/[0.03]">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03]">
                   <Code2
                     size={18}
                     strokeWidth={1.5}
@@ -252,11 +246,7 @@ export default function SelectedWork() {
                 </div>
 
                 <div>
-                  {/* <p className="text-xs uppercase tracking-[0.2em] text-white/40">
-                    02
-                  </p> */}
-
-                  <h3 className="mt-1 text-xl font-medium">
+                  <h3 className="text-lg sm:text-xl font-medium">
                     Personal Projects
                   </h3>
                 </div>
@@ -268,7 +258,7 @@ export default function SelectedWork() {
             </div>
 
             {/* Project items */}
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {personalProjects.map((project, index) => (
                 <motion.article
                   key={project.id}
@@ -279,53 +269,51 @@ export default function SelectedWork() {
                     duration: 0.5,
                     delay: index * 0.1,
                   }}
-                  className="group relative overflow-hidden rounded-1xl border border-white/10 border-gray-800 bg-gray-950/10 p-6 transition-all duration-500 hover:border-[#00B4D8]/30 hover:bg-[#00B4D8]/[0.03]"
+                  className="group relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-950/40 p-5 sm:p-6 transition-all duration-500 hover:border-[#00B4D8]/30 hover:bg-[#00B4D8]/[0.03]"
                 >
                   {/* Subtle aqua glow */}
                   <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-[#00B4D8]/[0.8] blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                   <div className="relative">
-                    {/* Top row */}
-                    <div className="flex items-center justify-between">
-                      {/* <span className="text-xs tracking-[0.2em] text-[#00B4D8]">
-                      </span> */}
-
-                      {/* <span className="text-xs text-white/30">
-                        {project.period}
-                      </span> */}
-                    </div>
-
                     {/* Project title */}
-                    <div className="flex items-start justify-between gap-2">
+                    <div className="flex items-start justify-between gap-3">
                       <div>
-                        <span className="text-[10px] uppercase tracking-[0.25em] text-white/30">
-                          {project.period} | {project.type}
+                        <span className="text-[10px] uppercase tracking-[0.25em] text-cyan-400/70 font-mono">
+                          {project.period} • {project.type}
                         </span>
 
-                        <h4 className="mt-2 text-2xl font-medium transition-colors duration-300 group-hover:text-[#00B4D8]">
+                        <h4 className="mt-1 text-xl sm:text-2xl font-medium transition-colors duration-300 group-hover:text-[#00B4D8]">
                           {project.title}
                         </h4>
                       </div>
 
-                      <div className="flex gap-2">
-                        <a
-                          href={project.link}
-                          aria-label={`View ${project.title}`}
-                          className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8]"
-                        >
-                          <ArrowUpRight size={15} />
-                        </a>
+                      <div className="flex items-center gap-2">
+                        {project.github && project.github !== "#" && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`View ${project.title} on GitHub`}
+                            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8]"
+                          >
+                            <GitBranch size={15} />
+                          </a>
+                        )}
 
-                        <a
-                          href={project.github}
-                          aria-label={`View ${project.title} on GitHub`}
-                          className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8]"
-                        ></a>
+                        {project.link && (
+                          <a
+                            href={project.link}
+                            aria-label={`View ${project.title}`}
+                            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8]"
+                          >
+                            <ArrowUpRight size={15} />
+                          </a>
+                        )}
                       </div>
                     </div>
 
                     {/* Description */}
-                    <p className="mt-4 text-sm leading-6 text-white/45">
+                    <p className="mt-3 text-xs sm:text-sm leading-6 text-white/50">
                       {project.description}
                     </p>
 
@@ -334,7 +322,7 @@ export default function SelectedWork() {
                       {project.technologies.map((technology) => (
                         <span
                           key={technology}
-                          className="rounded-full border border-white/10 px-3 py-1.5 text-[11px] text-white/80 transition-colors duration-300 group-hover:border-[#00B4D8]/20 group-hover:text-white/60"
+                          className="rounded-full border border-white/10 px-2.5 sm:px-3 py-1 sm:py-1.5 text-[11px] text-white/80 transition-colors duration-300 group-hover:border-[#00B4D8]/20 group-hover:text-white/60"
                         >
                           {technology}
                         </span>
@@ -356,16 +344,16 @@ export default function SelectedWork() {
           className="mt-10 border-t border-white/10 pt-8"
         >
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
-            <p className="max-w-xl text-sm leading-6 text-white/30">
+            <p className="max-w-xl text-xs sm:text-sm leading-6 text-white/40">
               Different environments, different problems — but always an
               opportunity to learn, build, and improve.
             </p>
 
             <a
-              href="#about"
-              className="group inline-flex items-center gap-2 text-sm text-white/50 transition-colors duration-300 hover:text-[#00B4D8]"
+              href="mailto:thea.marany@gmail.com"
+              className="group inline-flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
             >
-              Let&apos;s work together
+              <span>Let&apos;s work together</span>
               <ArrowUpRight
                 size={15}
                 className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

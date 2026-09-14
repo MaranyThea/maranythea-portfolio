@@ -98,7 +98,7 @@ export default function Capabilities() {
   return (
     <section
       id="capabilities"
-      className="relative w-full px-6 py-12 scroll-mt-14"
+      className="relative w-full px-4 sm:px-6 py-12 sm:py-20 scroll-mt-14"
     >
       <AquaAbout />
       <div className="max-w-7xl mx-auto">
@@ -107,12 +107,12 @@ export default function Capabilities() {
             SECTION HEADING
         ========================= */}
 
-        <div className="mb-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-cyan-400 mb-3">
+        <div className="mb-8">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-cyan-400 mb-2 sm:mb-3">
             What I specialize in
           </p>
 
-          <h2 className="text-4xl sm:text-5xl font-bold text-white">
+          <h2 className="text-3xl sm:text-5xl font-bold text-white">
             Capabilities
           </h2>
         </div>
@@ -121,139 +121,208 @@ export default function Capabilities() {
             MAIN LAYOUT
         ========================= */}
 
-        <div className="grid lg:grid-cols-[0.65fr_1.35fr] gap-10">
+        <div className="grid lg:grid-cols-[0.7fr_1.3fr] gap-6 sm:gap-8 lg:gap-10 items-start">
 
           {/* =========================
-              LEFT SIDE
+              LEFT SIDE - TABS/BUTTONS
           ========================= */}
 
-          <div className="space-y-3">
-
-            <p className="text-xs uppercase tracking-[0.25em] text-gray-500 mb-6">
-              Areas I work in
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-gray-500 mb-4">
+              Select an area
             </p>
 
-            {capabilities.map((item, index) => {
-              const Icon = item.icon;
-
-              const isActive = activeIndex === index;
-
-              return (
-                <button
-                  key={item.number}
-                  type="button"
-                  onClick={() => setActiveIndex(index)}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-2.5 sm:gap-3">
+              {/* Default Overview button for mobile / desktop */}
+              <button
+                type="button"
+                onClick={() => setActiveIndex(null)}
+                className={`
+                  group
+                  w-full
+                  flex items-center gap-2.5 sm:gap-4
+                  p-3 sm:p-4
+                  rounded-xl sm:rounded-2xl
+                  border
+                  text-left
+                  transition-all duration-300
+                  ${
+                    activeIndex === null
+                      ? "border-cyan-500/50 bg-cyan-500/[0.08]"
+                      : "border-gray-800 bg-gray-950/40 hover:border-cyan-500/40 hover:bg-gray-900/60"
+                  }
+                `}
+              >
+                <span
                   className={`
-                    group
-                    w-full
-                    flex items-center gap-4
-                    p-4
-                    rounded-2xl
-                    border
-                    text-left
-                    transition-all duration-300
-
+                    text-[11px] sm:text-xs font-mono
+                    transition-colors duration-300
                     ${
-                      isActive
-                        ? "border-cyan-500/50 bg-cyan-500/[0.08]"
-                        : "border-gray-800 bg-gray-950/40 hover:border-cyan-500/40 hover:bg-gray-900/60"
+                      activeIndex === null
+                        ? "text-cyan-400"
+                        : "text-gray-600 group-hover:text-cyan-400"
                     }
                   `}
                 >
+                  00
+                </span>
 
-                  {/* Number */}
+                <div
+                  className={`
+                    w-8 h-8 sm:w-10 sm:h-10
+                    rounded-lg sm:rounded-xl
+                    border
+                    flex items-center justify-center shrink-0
+                    transition-all duration-300
+                    ${
+                      activeIndex === null
+                        ? "bg-cyan-500 border-cyan-500 text-white"
+                        : "bg-gray-900 border-gray-800 text-cyan-400 group-hover:bg-cyan-500 group-hover:border-cyan-500 group-hover:text-white"
+                    }
+                  `}
+                >
+                  <Gauge size={16} />
+                </div>
 
-                  <span
+                <span
+                  className={`
+                    text-xs sm:text-sm font-medium truncate
+                    transition-colors duration-300
+                    ${
+                      activeIndex === null
+                        ? "text-white"
+                        : "text-gray-400 group-hover:text-white"
+                    }
+                  `}
+                >
+                  Overview
+                </span>
+
+                <span
+                  className={`
+                    hidden lg:block ml-auto
+                    w-1.5 h-1.5
+                    rounded-full
+                    transition-all duration-300
+                    ${
+                      activeIndex === null
+                        ? "bg-cyan-400 opacity-100"
+                        : "bg-transparent opacity-0"
+                    }
+                  `}
+                />
+              </button>
+
+              {capabilities.map((item, index) => {
+                const Icon = item.icon;
+                const isActive = activeIndex === index;
+
+                return (
+                  <button
+                    key={item.number}
+                    type="button"
+                    onClick={() => setActiveIndex(index)}
                     className={`
-                      text-xs
-                      transition-colors duration-300
-                      ${
-                        isActive
-                          ? "text-cyan-400"
-                          : "text-gray-600 group-hover:text-cyan-400"
-                      }
-                    `}
-                  >
-                    {item.number}
-                  </span>
-
-                  {/* Icon */}
-
-                  <div
-                    className={`
-                      w-10 h-10
-                      rounded-xl
+                      group
+                      w-full
+                      flex items-center gap-2.5 sm:gap-4
+                      p-3 sm:p-4
+                      rounded-xl sm:rounded-2xl
                       border
-                      flex items-center justify-center
+                      text-left
                       transition-all duration-300
-
                       ${
                         isActive
-                          ? "bg-cyan-500 border-cyan-500 text-white"
-                          : "bg-gray-900 border-gray-800 text-cyan-400 group-hover:bg-cyan-500 group-hover:border-cyan-500 group-hover:text-white"
+                          ? "border-cyan-500/50 bg-cyan-500/[0.08]"
+                          : "border-gray-800 bg-gray-950/40 hover:border-cyan-500/40 hover:bg-gray-900/60"
                       }
                     `}
                   >
-                    <Icon size={18} />
-                  </div>
+                    {/* Number */}
+                    <span
+                      className={`
+                        text-[11px] sm:text-xs font-mono
+                        transition-colors duration-300
+                        ${
+                          isActive
+                            ? "text-cyan-400"
+                            : "text-gray-600 group-hover:text-cyan-400"
+                        }
+                      `}
+                    >
+                      {item.number}
+                    </span>
 
-                  {/* Title */}
+                    {/* Icon */}
+                    <div
+                      className={`
+                        w-8 h-8 sm:w-10 sm:h-10
+                        rounded-lg sm:rounded-xl
+                        border
+                        flex items-center justify-center shrink-0
+                        transition-all duration-300
+                        ${
+                          isActive
+                            ? "bg-cyan-500 border-cyan-500 text-white"
+                            : "bg-gray-900 border-gray-800 text-cyan-400 group-hover:bg-cyan-500 group-hover:border-cyan-500 group-hover:text-white"
+                        }
+                      `}
+                    >
+                      <Icon size={16} />
+                    </div>
 
-                  <span
-                    className={`
-                      font-medium
-                      transition-colors duration-300
+                    {/* Title */}
+                    <span
+                      className={`
+                        text-xs sm:text-sm font-medium truncate
+                        transition-colors duration-300
+                        ${
+                          isActive
+                            ? "text-white"
+                            : "text-gray-400 group-hover:text-white"
+                        }
+                      `}
+                    >
+                      {item.title}
+                    </span>
 
-                      ${
-                        isActive
-                          ? "text-white"
-                          : "text-gray-400 group-hover:text-white"
-                      }
-                    `}
-                  >
-                    {item.title}
-                  </span>
-
-                  {/* Active indicator */}
-
-                  <span
-                    className={`
-                      ml-auto
-                      w-1.5 h-1.5
-                      rounded-full
-                      transition-all duration-300
-
-                      ${
-                        isActive
-                          ? "bg-cyan-400 opacity-100"
-                          : "bg-transparent opacity-0"
-                      }
-                    `}
-                  />
-
-                </button>
-              );
-            })}
+                    {/* Active indicator */}
+                    <span
+                      className={`
+                        hidden lg:block ml-auto
+                        w-1.5 h-1.5
+                        rounded-full
+                        transition-all duration-300
+                        ${
+                          isActive
+                            ? "bg-cyan-400 opacity-100"
+                            : "bg-transparent opacity-0"
+                        }
+                      `}
+                    />
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           {/* =========================
-              RIGHT SIDE
+              RIGHT SIDE - DETAILS CARD
           ========================= */}
 
           <div
             className="
               relative
-              min-h-[460px]
-              rounded-3xl
+              min-h-[380px] sm:min-h-[440px]
+              rounded-2xl sm:rounded-3xl
               border border-gray-800
               bg-gray-950/50
-              p-6 sm:p-8
+              p-5 sm:p-8
               overflow-hidden
             "
           >
 
             {/* Aqua Glow */}
-
             <div
               className="
                 pointer-events-none
@@ -283,23 +352,23 @@ export default function Capabilities() {
             />
 
             {/* =========================
-                DEFAULT STATE
+                DEFAULT OVERVIEW STATE
             ========================= */}
 
             {activeCapability === null && (
               <div className="relative h-full flex flex-col justify-center">
 
-                <p className="text-xs uppercase tracking-[0.3em] text-cyan-400 mb-4">
+                <p className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-cyan-400 mb-3 sm:mb-4">
                   Primary Specialization
                 </p>
 
-                <h3 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+                <h3 className="text-2xl sm:text-4xl font-bold text-white leading-tight">
                   Full-Stack
                   <br />
                   Web Development
                 </h3>
 
-                <p className="mt-4 max-w-2xl text-gray-400 leading-7">
+                <p className="mt-3 sm:mt-4 max-w-2xl text-sm sm:text-base text-gray-400 leading-6 sm:leading-7">
                   I specialize in building modern web applications
                   from interface to backend, combining clean
                   architecture, responsive design, and practical
@@ -308,17 +377,17 @@ export default function Capabilities() {
 
                 {/* Secondary Focus */}
 
-                <div className="mt-4 pt-4 border-t border-gray-800">
+                <div className="mt-6 pt-5 border-t border-gray-800">
 
-                  <p className="text-xs uppercase tracking-[0.25em] text-gray-500 mb-3">
+                  <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-gray-500 mb-2 sm:mb-3">
                     Secondary Focus
                   </p>
 
-                  <h4 className="text-xl font-semibold text-white">
+                  <h4 className="text-lg sm:text-xl font-semibold text-white">
                     Data-Driven Applications
                   </h4>
 
-                  <p className="mt-3 text-sm text-gray-500 leading-6 max-w-xl">
+                  <p className="mt-2 text-xs sm:text-sm text-gray-500 leading-5 sm:leading-6 max-w-xl">
                     Working with databases, APIs, and data to create
                     applications that are reliable, structured,
                     and useful.
@@ -328,9 +397,9 @@ export default function Capabilities() {
 
                 {/* Core Technologies */}
 
-                <div className="mt-8">
+                <div className="mt-6">
 
-                  <p className="text-xs uppercase tracking-[0.25em] text-gray-500 mb-4">
+                  <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-gray-500 mb-3 sm:mb-4">
                     Core Technologies
                   </p>
 
@@ -349,11 +418,11 @@ export default function Capabilities() {
                       <span
                         key={skill}
                         className="
-                          px-3 py-1.5
+                          px-2.5 sm:px-3 py-1 sm:py-1.5
                           rounded-full
                           border border-gray-800
                           bg-gray-900
-                          text-sm text-gray-400
+                          text-xs sm:text-sm text-gray-400
                           hover:border-cyan-500/40
                           hover:text-white
                           transition-all duration-300
@@ -376,32 +445,32 @@ export default function Capabilities() {
             {activeCapability && (
               <div
                 key={activeCapability.number}
-                className="relative h-full flex flex-col justify-center"
+                className="relative h-full flex flex-col justify-center animate-in fade-in-50 duration-300"
               >
 
                 {/* Number */}
 
-                <p className="text-sm text-cyan-400 mb-5 tracking-widest">
-                  {activeCapability.number}
+                <p className="text-xs sm:text-sm text-cyan-400 mb-3 sm:mb-4 tracking-widest font-mono">
+                  Area {activeCapability.number}
                 </p>
 
                 {/* Heading */}
 
-                <h3 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+                <h3 className="text-2xl sm:text-4xl font-bold text-white leading-tight">
                   {activeCapability.heading}
                 </h3>
 
                 {/* Description */}
 
-                <p className="mt-6 max-w-2xl text-gray-400 leading-7">
+                <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-base text-gray-400 leading-6 sm:leading-7">
                   {activeCapability.description}
                 </p>
 
                 {/* What I can do */}
 
-                <div className="mt-10">
+                <div className="mt-6 sm:mt-8">
 
-                  <p className="text-xs uppercase tracking-[0.25em] text-gray-500 mb-4">
+                  <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-gray-500 mb-3 sm:mb-4">
                     Technologies I use
                   </p>
 
@@ -411,11 +480,11 @@ export default function Capabilities() {
                       <span
                         key={skill}
                         className="
-                          px-3 py-1.5
+                          px-2.5 sm:px-3 py-1 sm:py-1.5
                           rounded-full
                           border border-gray-800
                           bg-gray-900
-                          text-sm text-gray-400
+                          text-xs sm:text-sm text-gray-300
                           hover:border-cyan-500/40
                           hover:text-white
                           transition-all duration-300
@@ -430,11 +499,11 @@ export default function Capabilities() {
 
                 {/* Bottom message */}
 
-                <div className="mt-10 pt-6 border-t border-gray-800">
+                <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-800">
 
-                  <p className="text-sm text-gray-500">
+                  <p className="text-xs sm:text-sm text-gray-500">
                     Part of my{" "}
-                    <span className="text-gray-400">
+                    <span className="text-gray-300 font-medium">
                       Full-Stack Web Development
                     </span>{" "}
                     specialization.
