@@ -331,7 +331,7 @@ export default function About() {
                 icon={<Globe size={18} />}
                 label="LinkedIn"
                 value="Marany Thea"
-                href="https://www.linkedin.com/in/marany-thea-347302245/"
+                href="https://www.linkedin.com/in/maranythea/"
               />
 
               <InfoRow
