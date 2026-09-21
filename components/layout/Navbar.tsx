@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Menu, X, ArrowUpRight, GitBranch, LinkIcon, Mail } from "lucide-react";
+import { Menu, X, ArrowUpRight, Mail } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "@/components/ui/Icons";
 
 const navItems = [
   { name: "Home", href: "#" },
@@ -137,7 +138,7 @@ export default function Navbar() {
                 aria-label="GitHub"
                 className="p-2.5 rounded-lg border border-gray-800 bg-gray-900/60 text-gray-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
               >
-                <GitBranch size={18} />
+                <GithubIcon size={18} />
               </a>
               <a
                 href="https://www.linkedin.com/in/marany-thea-347302245/"
@@ -146,7 +147,7 @@ export default function Navbar() {
                 aria-label="LinkedIn"
                 className="p-2.5 rounded-lg border border-gray-800 bg-gray-900/60 text-gray-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
               >
-                <LinkIcon size={18} />
+                <LinkedinIcon size={18} />
               </a>
             </div>
           </div>

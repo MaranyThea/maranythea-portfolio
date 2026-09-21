@@ -45,16 +45,26 @@ export const workItems: WorkItem[] = [
   },
 
   {
-    id: "task-management",
+    id: "flowboard",
     number: "03",
     type: "Project",
     year: "2026",
-    title: "Task Management App",
-    subtitle: "Simple tools for organized work",
+    title: "FlowBoard",
+    subtitle: "Full-stack personal tracking dashboard",
     description:
-      "A task management application focused on creating, organizing, completing, and managing daily tasks through a clean and intuitive interface.",
-    technologies: ["JavaScript", "HTML", "CSS", "Local Storage"],
-    image: "/images/work/task-management.jpg",
+      "A full-stack personal tracking dashboard for managing projects, tasks, goals, habits, finances, and everyday progress in one place.",
+    technologies: [
+      "Angular",
+      "TypeScript",
+      "NestJS",
+      "Node.js",
+      "PostgreSQL",
+      "REST API",
+      "Git",
+      "GitHub",
+    ],
+    image: "/images/work/flowboard.jpg",
+    link: "https://github.com/MaranyThea",
   },
 
   {

@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import AquaAbout from "../ui/AquaAbout";
-import { ArrowUpRight, Briefcase, Code2, GitBranch } from "lucide-react";
+import { ArrowUpRight, Briefcase, Code2 } from "lucide-react";
+import { GithubIcon } from "@/components/ui/Icons";
 
 const professionalWork = [
   {
@@ -46,33 +47,31 @@ const professionalWork = [
 const personalProjects = [
   {
     id: "01",
-    title: "Personal Portfolio",
+    title: "FlowBoard",
     period: "2026",
     description:
-      "A personal developer portfolio designed around interactive interfaces, motion, and a black-and-aqua visual identity.",
-    technologies: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+      "A full-stack personal tracking dashboard for managing projects, tasks, goals, habits, finances, and everyday progress in one place.",
+    technologies: [
+      "Angular",
+      "TypeScript",
+      "NestJS",
+      "Node.js",
+      "PostgreSQL",
+      "REST API",
+      "Git",
+      "GitHub",
+    ],
     type: "Featured",
     link: "#",
     github: "https://github.com/MaranyThea",
   },
   {
     id: "02",
-    title: "Expense Tracker",
+    title: "Personal Portfolio",
     period: "2026",
     description:
-      "A practical expense management application for recording, organizing, and tracking personal spending.",
-    technologies: ["React", "TypeScript", "CSS"],
-    type: "Web App",
-    link: "#",
-    github: "https://github.com/MaranyThea",
-  },
-  {
-    id: "03",
-    title: "Weather App",
-    period: "2026",
-    description:
-      "A weather application focused on clean data presentation and a simple responsive user experience.",
-    technologies: ["React", "API", "JavaScript"],
+      "A personal developer portfolio designed around interactive interfaces, motion, and a black-and-aqua visual identity.",
+    technologies: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     type: "Web App",
     link: "#",
     github: "https://github.com/MaranyThea",
@@ -296,7 +295,7 @@ export default function SelectedWork() {
                             aria-label={`View ${project.title} on GitHub`}
                             className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8]"
                           >
-                            <GitBranch size={15} />
+                            <GithubIcon size={15} />
                           </a>
                         )}
 

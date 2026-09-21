@@ -7,10 +7,9 @@ import {
   Mail,
   MapPin,
   Briefcase,
-  GitBranch,
-  Globe,
   ArrowUpRight,
 } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "@/components/ui/Icons";
 import AnimatedSection from "../ui/AnimatedSection";
 
 export default function About() {
@@ -321,14 +320,14 @@ export default function About() {
               />
 
               <InfoRow
-                icon={<GitBranch size={18} />}
+                icon={<GithubIcon size={18} />}
                 label="GitHub"
                 value="MaranyThea"
                 href="https://github.com/MaranyThea"
               />
 
               <InfoRow
-                icon={<Globe size={18} />}
+                icon={<LinkedinIcon size={18} />}
                 label="LinkedIn"
                 value="Marany Thea"
                 href="https://www.linkedin.com/in/maranythea/"
