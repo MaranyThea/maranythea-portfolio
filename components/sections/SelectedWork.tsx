@@ -276,38 +276,37 @@ export default function SelectedWork() {
                   <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-[#00B4D8]/[0.8] blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                   <div className="relative">
-                    {/* Project title and header */}
-                    <div className="flex items-start justify-between gap-3">
-                      <div>
-                        <span className="text-[10px] uppercase tracking-[0.25em] text-cyan-400/70 font-mono">
-                          {project.period} • {project.type}
-                        </span>
+                    {/* Period & Type badge */}
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-cyan-400/70 font-mono">
+                      {project.period} • {project.type}
+                    </span>
 
-                        <h4 className="mt-1 text-xl sm:text-2xl font-medium transition-colors duration-300 group-hover:text-[#00B4D8]">
-                          {project.link ? (
-                            <a
-                              href={project.link}
-                              target={project.link.startsWith("http") ? "_blank" : undefined}
-                              rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
-                              className="hover:underline inline-flex items-center gap-1.5"
-                            >
-                              <span>{project.title}</span>
-                              <ArrowUpRight size={16} className="opacity-60 group-hover:opacity-100 transition-opacity" />
-                            </a>
-                          ) : (
-                            project.title
-                          )}
-                        </h4>
-                      </div>
+                    {/* Title & Action Icons Row */}
+                    <div className="mt-1 flex items-center justify-between gap-3">
+                      <h4 className="text-xl sm:text-2xl font-medium text-white transition-colors duration-300 group-hover:text-[#00B4D8]">
+                        {project.link ? (
+                          <a
+                            href={project.link}
+                            target={project.link.startsWith("http") ? "_blank" : undefined}
+                            rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
+                            className="hover:underline"
+                          >
+                            {project.title}
+                          </a>
+                        ) : (
+                          project.title
+                        )}
+                      </h4>
 
-                      {/* Top Action Icons */}
-                      <div className="flex items-center gap-2">
+                      {/* Action Icons directly on the right side of Title */}
+                      <div className="flex items-center gap-2 shrink-0">
                         {project.github && project.github !== "#" && (
                           <a
                             href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={`View ${project.title} on GitHub`}
+                            title="View GitHub Repository"
                             className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8] hover:bg-white/[0.04]"
                           >
                             <GithubIcon size={15} />
@@ -319,8 +318,9 @@ export default function SelectedWork() {
                             href={project.link}
                             target={project.link.startsWith("http") ? "_blank" : undefined}
                             rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
-                            aria-label={`Open Live Demo for ${project.title}`}
-                            className="flex h-9 w-9 items-center justify-center rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-500 hover:text-white"
+                            aria-label={`Live Demo for ${project.title}`}
+                            title="Live Demo"
+                            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8] hover:bg-[#00B4D8]/10"
                           >
                             <ArrowUpRight size={15} />
                           </a>
@@ -343,39 +343,6 @@ export default function SelectedWork() {
                           {technology}
                         </span>
                       ))}
-                    </div>
-
-                    {/* Live Demo & Code Actions Footer */}
-                    <div className="mt-5 pt-4 border-t border-white/5 flex flex-wrap items-center justify-between gap-3">
-                      <div className="flex items-center gap-2.5">
-                        {project.link && (
-                          <a
-                            href={project.link}
-                            target={project.link.startsWith("http") ? "_blank" : undefined}
-                            rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
-                            className="group/btn inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-xs font-medium text-cyan-300 hover:bg-cyan-500 hover:text-white hover:border-cyan-400 transition-all duration-300 shadow-sm shadow-cyan-500/10"
-                          >
-                            <span className="relative flex h-2 w-2">
-                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                              <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400 group-hover/btn:bg-white"></span>
-                            </span>
-                            <span>{project.liveLabel || "Live Demo"}</span>
-                            <ArrowUpRight size={13} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                          </a>
-                        )}
-
-                        {project.github && project.github !== "#" && (
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] text-xs font-medium text-white/60 hover:text-white hover:border-white/20 hover:bg-white/[0.06] transition-all duration-300"
-                          >
-                            <GithubIcon size={13} />
-                            <span>Code</span>
-                          </a>
-                        )}
-                      </div>
                     </div>
                   </div>
                 </motion.article>
