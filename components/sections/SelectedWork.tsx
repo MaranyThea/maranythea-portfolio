@@ -10,7 +10,8 @@ const professionalWork = [
   {
     id: "01",
     role: "Technical / IT Support",
-    company: "Department of Social Affairs, Veterans and Youth Rehabilitation (DoSVY)",
+    company:
+      "Department of Social Affairs, Veterans and Youth Rehabilitation (DoSVY)",
     period: "Jan 2021 — Dec 2023",
     logo: "/images/MoSVY.jpeg",
     description:
@@ -62,9 +63,9 @@ const personalProjects = [
       "GitHub",
     ],
     type: "Featured",
-    link: "https://github.com/MaranyThea",
-    github: "https://github.com/MaranyThea",
-    liveLabel: "Live Demo",
+    status: "In Progress",
+    github: "https://github.com/MaranyThea/marany-flowboard",
+    link: "",
   },
   {
     id: "02",
@@ -74,9 +75,9 @@ const personalProjects = [
       "A personal developer portfolio designed around interactive interfaces, motion, and a black-and-aqua visual identity.",
     technologies: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     type: "Web App",
-    link: "/",
+    status: "Live Demo",
     github: "https://github.com/MaranyThea/marany-portfolio",
-    liveLabel: "Live Preview",
+    link: "/",
   },
 ];
 
@@ -284,48 +285,45 @@ export default function SelectedWork() {
                     {/* Title & Action Icons Row */}
                     <div className="mt-1 flex items-center justify-between gap-3">
                       <h4 className="text-xl sm:text-2xl font-medium text-white transition-colors duration-300 group-hover:text-[#00B4D8]">
-                        {project.link ? (
-                          <a
-                            href={project.link}
-                            target={project.link.startsWith("http") ? "_blank" : undefined}
-                            rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
-                            className="hover:underline"
-                          >
-                            {project.title}
-                          </a>
-                        ) : (
-                          project.title
-                        )}
+                        {project.title}
                       </h4>
 
-                      {/* Action Icons directly on the right side of Title */}
-                      <div className="flex items-center gap-2 shrink-0">
-                        {project.github && project.github !== "#" && (
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`View ${project.title} on GitHub`}
-                            title="View GitHub Repository"
-                            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8] hover:bg-white/[0.04]"
-                          >
-                            <GithubIcon size={15} />
-                          </a>
-                        )}
+<div className="flex items-center gap-2 shrink-0">
+  {/* GitHub */}
+  {project.github && project.github !== "#" && (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`View ${project.title} on GitHub`}
+      title="View GitHub Repository"
+      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8] hover:bg-white/[0.04]"
+    >
+      <GithubIcon size={15} />
+    </a>
+  )}
 
-                        {project.link && (
-                          <a
-                            href={project.link}
-                            target={project.link.startsWith("http") ? "_blank" : undefined}
-                            rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
-                            aria-label={`Live Demo for ${project.title}`}
-                            title="Live Demo"
-                            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8] hover:bg-[#00B4D8]/10"
-                          >
-                            <ArrowUpRight size={15} />
-                          </a>
-                        )}
-                      </div>
+  {/* Status / Live Demo */}
+  {project.status === "Live Demo" && project.link ? (
+    <a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Open live demo for ${project.title}`}
+      title="Open Live Demo"
+      className="flex h-9 items-center justify-center rounded-full border border-white/10 px-3 text-[11px] font-medium text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8] hover:bg-[#00B4D8]/10"
+    >
+      {project.status}
+    </a>
+  ) : (
+    <span
+      className="flex h-9 items-center justify-center rounded-full border border-white/10 px-3 text-[11px] font-medium text-white/30"
+      title="Project in progress"
+    >
+      {project.status}
+    </span>
+  )}
+</div>
                     </div>
 
                     {/* Description */}
