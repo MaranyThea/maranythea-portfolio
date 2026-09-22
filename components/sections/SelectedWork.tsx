@@ -133,7 +133,7 @@ export default function SelectedWork() {
             {/* Section heading */}
             <div className="mb-6 flex items-center justify-between">
               <div className="flex items-center gap-3 sm:gap-4">
-                <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03]">
+                <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/10 bg-white/3">
                   <Briefcase
                     size={18}
                     strokeWidth={1.5}
@@ -170,7 +170,7 @@ export default function SelectedWork() {
                   <div className="mb-4 flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-4">
                     <div className="flex items-start gap-3.5 sm:gap-4">
                       {/* Company Logo */}
-                      <div className="mt-1 flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
+                      <div className="mt-1 flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white/3">
                         {work.logo ? (
                           <Image
                             src={work.logo}
@@ -214,7 +214,7 @@ export default function SelectedWork() {
                     {work.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="rounded-full border border-white/10 bg-white/[0.02] px-2.5 sm:px-3 py-1 sm:py-1.5 text-[11px] text-white/40 transition-colors duration-300 group-hover:border-[#00B4D8]/20 group-hover:text-white/60"
+                        className="rounded-full border border-white/10 bg-white/2 px-2.5 sm:px-3 py-1 sm:py-1.5 text-[11px] text-white/40 transition-colors duration-300 group-hover:border-[#00B4D8]/20 group-hover:text-white/60"
                       >
                         {skill}
                       </span>
@@ -239,7 +239,7 @@ export default function SelectedWork() {
             {/* Section heading */}
             <div className="mb-6 flex items-center justify-between">
               <div className="flex items-center gap-3 sm:gap-4">
-                <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03]">
+                <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/10 bg-white/3">
                   <Code2
                     size={18}
                     strokeWidth={1.5}
@@ -271,10 +271,10 @@ export default function SelectedWork() {
                     duration: 0.5,
                     delay: index * 0.1,
                   }}
-                  className="group relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-950/40 p-5 sm:p-6 transition-all duration-500 hover:border-[#00B4D8]/30 hover:bg-[#00B4D8]/[0.03]"
+                  className="group relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-950/40 p-5 sm:p-6 transition-all duration-500 hover:border-[#00B4D8]/30 hover:bg-[#00B4D8]/3"
                 >
                   {/* Subtle aqua glow */}
-                  <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-[#00B4D8]/[0.8] blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-[#00B4D8]/80 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                   <div className="relative">
                     {/* Period & Type badge */}
@@ -297,7 +297,7 @@ export default function SelectedWork() {
       rel="noopener noreferrer"
       aria-label={`View ${project.title} on GitHub`}
       title="View GitHub Repository"
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8] hover:bg-white/[0.04]"
+      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-[#00B4D8]/50 hover:text-[#00B4D8] hover:bg-white/4"
     >
       <GithubIcon size={15} />
     </a>
