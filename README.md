@@ -1,40 +1,106 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marany Thea — Software Developer
 
-## Getting Started
+Personal portfolio website of **Marany Thea**, a Software Developer from Cambodia, focused on building modern web applications and practical digital products.
 
-First, run the development server:
+🌐 **Live Website:** [maranythea.vercel.app](https://maranythea.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## About
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I'm a Software Developer interested in building full-stack web applications, from responsive user interfaces and APIs to databases and application architecture.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+My experience includes:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Frontend development
+- Backend development
+- REST API integration
+- Database design and management
+- CMS development
+- Automation and data synchronization
+- Testing and performance testing
+- Technical documentation
 
-## Learn More
+### Technologies
 
-To learn more about Next.js, take a look at the following resources:
+- React
+- Angular
+- Next.js
+- TypeScript
+- JavaScript
+- HTML & CSS
+- Node.js
+- NestJS
+- REST APIs
+- SQL & NoSQL
+- Git & GitHub
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I enjoy turning ideas and real-world problems into clean, functional, and useful digital products.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+**Frontend**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Next.js
+- React
+- Angular
+- TypeScript
+- JavaScript
+- Tailwind CSS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# marany-portfolio
->>>>>>> d3ba3dbdfd7652073a09c03f47532e1203b62c49
+**Backend & APIs**
+
+- Node.js
+- NestJS
+- REST APIs
+- JSON
+- JWT
+- CRUD
+
+**Databases**
+
+- MySQL
+- PostgreSQL
+- MongoDB
+
+**Tools & Platforms**
+
+- Git
+- GitHub
+- Vercel
+- Postman
+- npm / Yarn
+- Liferay CMS
+
+## Featured Projects
+
+### FlowBoard
+
+A personal productivity and project management application for managing projects, tasks, goals, finances, and personal progress.
+
+**Tech:** Angular, TypeScript, NestJS, PostgreSQL
+
+### RIEBCV
+
+A CV builder designed to help students and job seekers create professional resumes more easily.
+
+**Tech:** Next.js, TypeScript, Tailwind CSS
+
+## Experience
+
+**Junior Software Engineer**
+
+Experience working on production web applications across frontend development, REST API integration, CMS development, backend and database tasks, automation, testing, performance testing, and technical documentation.
+
+## Education
+
+**BSc in Computer Science & Engineering**  
+Royal University of Phnom Penh
+
+## Connect
+
+- **Portfolio:** [maranythea.vercel.app](https://maranythea.vercel.app)
+- **GitHub:** [github.com/MaranyThea](https://github.com/MaranyThea)
+- **LinkedIn:** [linkedin.com/in/maranythea](https://www.linkedin.com/in/maranythea)
+
+---
+
+*Building practical products, from idea to implementation.*
